@@ -20,7 +20,7 @@ class TodoListInteractor: ITodoListInteractor {
 		self.sectionManager = sectionManager
 		self.presenter = presenter
 	}
-		
+
 	func fetchData() {
 		var responseData = [TodoListModel.Response.SectionWithTasks]()
 		for section in sectionManager.getSections() {
@@ -31,9 +31,9 @@ class TodoListInteractor: ITodoListInteractor {
 			responseData.append(sectionWithTasks)
 		}
 		let response = TodoListModel.Response(data: responseData)
-		presenter.present(responce: response)
+		presenter.present(response: response)
 	}
-	
+
 	func didTaskSelected(atIndex index: TodoListModel.Request.TaskSelected) {
 		let section = sectionManager.getSection(forIndex: index.indexPath.section)
 		let task = sectionManager.getTasksForSection(section: section)[index.indexPath.row]
