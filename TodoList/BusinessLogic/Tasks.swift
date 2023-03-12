@@ -22,6 +22,12 @@ class Task {
 	}
 }
 
+extension Task: Equatable {
+	static func == (lhs: Task, rhs: Task) -> Bool {
+		lhs.title == rhs.title && lhs.isComplete == rhs.isComplete
+	}
+}
+
 /// Обычное задание.
 final class RegularTask: Task { }
 
