@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E71D90F429BDD08F003419D4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D90F329BDD08F003419D4 /* Task.swift */; };
+		E71D90F629BE53CF003419D4 /* RegularTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D90F529BE53CF003419D4 /* RegularTask.swift */; };
+		E71D90F829BE6033003419D4 /* ImportantTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D90F729BE6033003419D4 /* ImportantTask.swift */; };
+		E71D90FA29BE6296003419D4 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D90F929BE6296003419D4 /* TaskManager.swift */; };
 		F551A17C29B9CF9500C006AF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A17B29B9CF9500C006AF /* LoginRouter.swift */; };
 		F551A19229B9CFEB00C006AF /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18429B9CFEB00C006AF /* TodoListViewController.swift */; };
 		F551A19329B9CFEB00C006AF /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18529B9CFEB00C006AF /* TodoListPresenter.swift */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		E71D90EA29BDB85F003419D4 /* TodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71D90F329BDD08F003419D4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		E71D90F529BE53CF003419D4 /* RegularTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTask.swift; sourceTree = "<group>"; };
+		E71D90F729BE6033003419D4 /* ImportantTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantTask.swift; sourceTree = "<group>"; };
+		E71D90F929BE6296003419D4 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		F551A17B29B9CF9500C006AF /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		F551A18429B9CFEB00C006AF /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		F551A18529B9CFEB00C006AF /* TodoListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
@@ -94,6 +100,9 @@
 		E71D90EB29BDB85F003419D4 /* TodoListTests */ = {
 			isa = PBXGroup;
 			children = (
+				E71D90F929BE6296003419D4 /* TaskManager.swift */,
+				E71D90F729BE6033003419D4 /* ImportantTask.swift */,
+				E71D90F529BE53CF003419D4 /* RegularTask.swift */,
 				E71D90F329BDD08F003419D4 /* Task.swift */,
 			);
 			path = TodoListTests;
@@ -312,6 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E71D90F429BDD08F003419D4 /* Task.swift in Sources */,
+				E71D90F829BE6033003419D4 /* ImportantTask.swift in Sources */,
+				E71D90FA29BE6296003419D4 /* TaskManager.swift in Sources */,
+				E71D90F629BE53CF003419D4 /* RegularTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
