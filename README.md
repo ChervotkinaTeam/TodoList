@@ -7,11 +7,12 @@
 - Decorator
 - Adapter
 - DI
-- MVP
+- CleanSwift
 
-## L1M6 Home Work
+## L2M2 Home Work
 
-- Переход от использования MVC к MVP.
+- Add SwiftLint
+- Add UnitTests
 
 ## Getting Started
 
