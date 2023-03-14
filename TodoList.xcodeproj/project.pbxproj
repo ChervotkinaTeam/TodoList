@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E71D90F429BDD08F003419D4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D90F329BDD08F003419D4 /* Task.swift */; };
-		E71D90F629BE53CF003419D4 /* RegularTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D90F529BE53CF003419D4 /* RegularTask.swift */; };
-		E71D90F829BE6033003419D4 /* ImportantTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D90F729BE6033003419D4 /* ImportantTask.swift */; };
-		E71D90FA29BE6296003419D4 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D90F929BE6296003419D4 /* TaskManager.swift */; };
+		2036F06C29C70F3200180C5B /* SectionForTaskManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */; };
+		20ABDBBF29C0C1DE0015104D /* TaskManagerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 20ABDBBE29C0C1DE0015104D /* TaskManagerPackage */; };
 		F551A17C29B9CF9500C006AF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A17B29B9CF9500C006AF /* LoginRouter.swift */; };
 		F551A19229B9CFEB00C006AF /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18429B9CFEB00C006AF /* TodoListViewController.swift */; };
 		F551A19329B9CFEB00C006AF /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18529B9CFEB00C006AF /* TodoListPresenter.swift */; };
@@ -20,12 +18,7 @@
 		F551A19729B9CFEB00C006AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18A29B9CFEB00C006AF /* LoginViewController.swift */; };
 		F551A19829B9CFEB00C006AF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18B29B9CFEB00C006AF /* LoginPresenter.swift */; };
 		F551A19929B9CFEB00C006AF /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18C29B9CFEB00C006AF /* LoginWorker.swift */; };
-		F551A19A29B9CFEB00C006AF /* SectionForTaskManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18E29B9CFEB00C006AF /* SectionForTaskManagerAdapter.swift */; };
 		F551A19B29B9CFEB00C006AF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18F29B9CFEB00C006AF /* Repository.swift */; };
-		F551A19C29B9CFEB00C006AF /* OrderedTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A19029B9CFEB00C006AF /* OrderedTaskManager.swift */; };
-		F551A19D29B9CFEB00C006AF /* ITaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A19129B9CFEB00C006AF /* ITaskManager.swift */; };
-		F551A1A429B9D06700C006AF /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A1A229B9D06700C006AF /* TaskManager.swift */; };
-		F551A1A529B9D06700C006AF /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A1A329B9D06700C006AF /* Tasks.swift */; };
 		F551A1A729B9D51C00C006AF /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A1A629B9D51C00C006AF /* LoginAssembler.swift */; };
 		F551A1A929B9EA7100C006AF /* TodoListAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A1A829B9EA7100C006AF /* TodoListAssembler.swift */; };
 		F551A1AB29BA1E9900C006AF /* TodoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A1AA29BA1E9900C006AF /* TodoListInteractor.swift */; };
@@ -47,11 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionForTaskManagerAdapter.swift; sourceTree = "<group>"; };
+		20ABDBBC29C0C1CB0015104D /* TaskManagerPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TaskManagerPackage; path = Framework/TaskManagerPackage; sourceTree = "<group>"; };
 		E71D90EA29BDB85F003419D4 /* TodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E71D90F329BDD08F003419D4 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		E71D90F529BE53CF003419D4 /* RegularTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularTask.swift; sourceTree = "<group>"; };
-		E71D90F729BE6033003419D4 /* ImportantTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportantTask.swift; sourceTree = "<group>"; };
-		E71D90F929BE6296003419D4 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		F551A17B29B9CF9500C006AF /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		F551A18429B9CFEB00C006AF /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		F551A18529B9CFEB00C006AF /* TodoListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
@@ -61,12 +52,7 @@
 		F551A18A29B9CFEB00C006AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F551A18B29B9CFEB00C006AF /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		F551A18C29B9CFEB00C006AF /* LoginWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
-		F551A18E29B9CFEB00C006AF /* SectionForTaskManagerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionForTaskManagerAdapter.swift; sourceTree = "<group>"; };
 		F551A18F29B9CFEB00C006AF /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		F551A19029B9CFEB00C006AF /* OrderedTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedTaskManager.swift; sourceTree = "<group>"; };
-		F551A19129B9CFEB00C006AF /* ITaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITaskManager.swift; sourceTree = "<group>"; };
-		F551A1A229B9D06700C006AF /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
-		F551A1A329B9D06700C006AF /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		F551A1A629B9D51C00C006AF /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
 		F551A1A829B9EA7100C006AF /* TodoListAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListAssembler.swift; sourceTree = "<group>"; };
 		F551A1AA29BA1E9900C006AF /* TodoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractor.swift; sourceTree = "<group>"; };
@@ -91,19 +77,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20ABDBBF29C0C1DE0015104D /* TaskManagerPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20ABDBB929C0C0FC0015104D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				20ABDBBC29C0C1CB0015104D /* TaskManagerPackage */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		20ABDBBD29C0C1DE0015104D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E71D90EB29BDB85F003419D4 /* TodoListTests */ = {
 			isa = PBXGroup;
 			children = (
-				E71D90F929BE6296003419D4 /* TaskManager.swift */,
-				E71D90F729BE6033003419D4 /* ImportantTask.swift */,
-				E71D90F529BE53CF003419D4 /* RegularTask.swift */,
-				E71D90F329BDD08F003419D4 /* Task.swift */,
 			);
 			path = TodoListTests;
 			sourceTree = "<group>";
@@ -120,6 +118,7 @@
 		F551A18329B9CFEB00C006AF /* TodoListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */,
 				F551A18429B9CFEB00C006AF /* TodoListViewController.swift */,
 				F551A18529B9CFEB00C006AF /* TodoListPresenter.swift */,
 				F551A1AA29BA1E9900C006AF /* TodoListInteractor.swift */,
@@ -146,29 +145,19 @@
 		F551A18D29B9CFEB00C006AF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				F551A18E29B9CFEB00C006AF /* SectionForTaskManagerAdapter.swift */,
 				F551A18F29B9CFEB00C006AF /* Repository.swift */,
-				F551A19029B9CFEB00C006AF /* OrderedTaskManager.swift */,
-				F551A19129B9CFEB00C006AF /* ITaskManager.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		F551A1A129B9D06700C006AF /* BusinessLogic */ = {
-			isa = PBXGroup;
-			children = (
-				F551A1A229B9D06700C006AF /* TaskManager.swift */,
-				F551A1A329B9D06700C006AF /* Tasks.swift */,
-			);
-			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
 		F5DAE3B129A3D29C0054AC5C = {
 			isa = PBXGroup;
 			children = (
+				20ABDBB929C0C0FC0015104D /* Packages */,
 				F5DAE3BC29A3D29C0054AC5C /* TodoList */,
 				E71D90EB29BDB85F003419D4 /* TodoListTests */,
 				F5DAE3BB29A3D29C0054AC5C /* Products */,
+				20ABDBBD29C0C1DE0015104D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,7 +173,6 @@
 		F5DAE3BC29A3D29C0054AC5C /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
-				F551A1A129B9D06700C006AF /* BusinessLogic */,
 				F551A18D29B9CFEB00C006AF /* Managers */,
 				F551A18229B9CFEB00C006AF /* Scenes */,
 				F5DAE3BD29A3D29C0054AC5C /* AppDelegate.swift */,
@@ -232,6 +220,9 @@
 			dependencies = (
 			);
 			name = TodoList;
+			packageProductDependencies = (
+				20ABDBBE29C0C1DE0015104D /* TaskManagerPackage */,
+			);
 			productName = CS2;
 			productReference = F5DAE3BA29A3D29C0054AC5C /* TodoList.app */;
 			productType = "com.apple.product-type.application";
@@ -320,10 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E71D90F429BDD08F003419D4 /* Task.swift in Sources */,
-				E71D90F829BE6033003419D4 /* ImportantTask.swift in Sources */,
-				E71D90FA29BE6296003419D4 /* TaskManager.swift in Sources */,
-				E71D90F629BE53CF003419D4 /* RegularTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,22 +318,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F551A19A29B9CFEB00C006AF /* SectionForTaskManagerAdapter.swift in Sources */,
 				F551A19829B9CFEB00C006AF /* LoginPresenter.swift in Sources */,
 				F551A19B29B9CFEB00C006AF /* Repository.swift in Sources */,
 				F551A19429B9CFEB00C006AF /* TodoListModel.swift in Sources */,
 				F551A19929B9CFEB00C006AF /* LoginWorker.swift in Sources */,
 				F551A19629B9CFEB00C006AF /* LoginModels.swift in Sources */,
-				F551A19D29B9CFEB00C006AF /* ITaskManager.swift in Sources */,
 				F551A1A729B9D51C00C006AF /* LoginAssembler.swift in Sources */,
-				F551A19C29B9CFEB00C006AF /* OrderedTaskManager.swift in Sources */,
 				F5DAE3BE29A3D29C0054AC5C /* AppDelegate.swift in Sources */,
 				F551A1A929B9EA7100C006AF /* TodoListAssembler.swift in Sources */,
+				2036F06C29C70F3200180C5B /* SectionForTaskManagerAdapter.swift in Sources */,
 				F5DAE3C029A3D29C0054AC5C /* SceneDelegate.swift in Sources */,
-				F551A1A429B9D06700C006AF /* TaskManager.swift in Sources */,
 				F551A19229B9CFEB00C006AF /* TodoListViewController.swift in Sources */,
 				F551A19329B9CFEB00C006AF /* TodoListPresenter.swift in Sources */,
-				F551A1A529B9D06700C006AF /* Tasks.swift in Sources */,
 				F551A1AB29BA1E9900C006AF /* TodoListInteractor.swift in Sources */,
 				F551A17C29B9CF9500C006AF /* LoginRouter.swift in Sources */,
 				F551A19529B9CFEB00C006AF /* LoginInteractor.swift in Sources */,
@@ -388,9 +371,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7WDCZ897WH;
+				DEVELOPMENT_TEAM = ZMX77LFT7B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -410,9 +394,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7WDCZ897WH;
+				DEVELOPMENT_TEAM = ZMX77LFT7B;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -629,6 +614,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20ABDBBE29C0C1DE0015104D /* TaskManagerPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TaskManagerPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5DAE3B229A3D29C0054AC5C /* Project object */;
 }
