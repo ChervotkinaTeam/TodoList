@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2036F06C29C70F3200180C5B /* SectionForTaskManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */; };
 		20ABDBBF29C0C1DE0015104D /* TaskManagerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 20ABDBBE29C0C1DE0015104D /* TaskManagerPackage */; };
+		E7316DB429C74102007E7F06 /* TaskRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7316DB329C74102007E7F06 /* TaskRepositoryStub.swift */; };
 		F551A17C29B9CF9500C006AF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A17B29B9CF9500C006AF /* LoginRouter.swift */; };
 		F551A19229B9CFEB00C006AF /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18429B9CFEB00C006AF /* TodoListViewController.swift */; };
 		F551A19329B9CFEB00C006AF /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18529B9CFEB00C006AF /* TodoListPresenter.swift */; };
@@ -43,6 +44,7 @@
 		2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionForTaskManagerAdapter.swift; sourceTree = "<group>"; };
 		20ABDBBC29C0C1CB0015104D /* TaskManagerPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TaskManagerPackage; path = Framework/TaskManagerPackage; sourceTree = "<group>"; };
 		E71D90EA29BDB85F003419D4 /* TodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7316DB329C74102007E7F06 /* TaskRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskRepositoryStub.swift; path = TodoListTests/TaskRepositoryStub.swift; sourceTree = SOURCE_ROOT; };
 		F551A17B29B9CF9500C006AF /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		F551A18429B9CFEB00C006AF /* TodoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		F551A18529B9CFEB00C006AF /* TodoListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		E71D90EB29BDB85F003419D4 /* TodoListTests */ = {
 			isa = PBXGroup;
 			children = (
+				E7316DB329C74102007E7F06 /* TaskRepositoryStub.swift */,
 			);
 			path = TodoListTests;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				TargetAttributes = {
 					E71D90E929BDB85F003419D4 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = F5DAE3B929A3D29C0054AC5C;
 					};
 					F5DAE3B929A3D29C0054AC5C = {
@@ -311,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7316DB429C74102007E7F06 /* TaskRepositoryStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,12 +376,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZMX77LFT7B;
+				DEVELOPMENT_TEAM = 7WDCZ897WH;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chervotkina.TodoListTests;
@@ -384,6 +395,7 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TodoList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TodoList";
@@ -394,12 +406,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZMX77LFT7B;
+				DEVELOPMENT_TEAM = 7WDCZ897WH;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chervotkina.TodoListTests;
@@ -534,7 +552,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZMX77LFT7B;
+				DEVELOPMENT_TEAM = 7WDCZ897WH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TodoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -562,7 +580,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZMX77LFT7B;
+				DEVELOPMENT_TEAM = 7WDCZ897WH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TodoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
