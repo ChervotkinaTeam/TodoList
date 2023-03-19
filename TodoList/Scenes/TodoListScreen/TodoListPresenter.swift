@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import TaskManagerPackage
 
 protocol ITodoListPresenter {
 	func present(response: TodoListModel.Response)

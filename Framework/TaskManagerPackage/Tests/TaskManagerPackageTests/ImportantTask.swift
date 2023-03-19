@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import TodoList
+@testable import TaskManagerPackage
 
 final class ImportantTaskTests: XCTestCase {
 
