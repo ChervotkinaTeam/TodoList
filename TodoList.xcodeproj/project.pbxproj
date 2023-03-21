@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2036F06C29C70F3200180C5B /* SectionForTaskManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */; };
 		20ABDBBF29C0C1DE0015104D /* TaskManagerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 20ABDBBE29C0C1DE0015104D /* TaskManagerPackage */; };
+		20D41BF429C9FBA400C63F7E /* SectionForTaskManagerAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D41BF329C9FBA400C63F7E /* SectionForTaskManagerAdapterTests.swift */; };
+		20D41BF629C9FC9200C63F7E /* MockTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D41BF529C9FC9200C63F7E /* MockTaskManager.swift */; };
 		E7316DB429C74102007E7F06 /* TaskRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7316DB329C74102007E7F06 /* TaskRepositoryStub.swift */; };
 		F551A17C29B9CF9500C006AF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A17B29B9CF9500C006AF /* LoginRouter.swift */; };
 		F551A19229B9CFEB00C006AF /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A18429B9CFEB00C006AF /* TodoListViewController.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionForTaskManagerAdapter.swift; sourceTree = "<group>"; };
 		20ABDBBC29C0C1CB0015104D /* TaskManagerPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TaskManagerPackage; path = Framework/TaskManagerPackage; sourceTree = "<group>"; };
+		20D41BF329C9FBA400C63F7E /* SectionForTaskManagerAdapterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionForTaskManagerAdapterTests.swift; sourceTree = "<group>"; };
+		20D41BF529C9FC9200C63F7E /* MockTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTaskManager.swift; sourceTree = "<group>"; };
 		E71D90EA29BDB85F003419D4 /* TodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7316DB329C74102007E7F06 /* TaskRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskRepositoryStub.swift; path = TodoListTests/TaskRepositoryStub.swift; sourceTree = SOURCE_ROOT; };
 		F551A17B29B9CF9500C006AF /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		E71D90EB29BDB85F003419D4 /* TodoListTests */ = {
 			isa = PBXGroup;
 			children = (
+				20D41BF529C9FC9200C63F7E /* MockTaskManager.swift */,
+				20D41BF329C9FBA400C63F7E /* SectionForTaskManagerAdapterTests.swift */,
 				E7316DB329C74102007E7F06 /* TaskRepositoryStub.swift */,
 			);
 			path = TodoListTests;
@@ -315,6 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D41BF629C9FC9200C63F7E /* MockTaskManager.swift in Sources */,
+				20D41BF429C9FBA400C63F7E /* SectionForTaskManagerAdapterTests.swift in Sources */,
 				E7316DB429C74102007E7F06 /* TaskRepositoryStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
