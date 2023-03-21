@@ -9,10 +9,20 @@
 - DI
 - CleanSwift
 
-## L2M2 Home Work
+## Подключение SwiftLint через HomeBrew
 
-- Add SwiftLint
-- Add UnitTests
+Данный проект использует SwiftLint для того, чтобы команда писала в общем стиле. Чтобы подключить SwiftLint следуйте следующим правилам:
+
+- в терминале напишите команду: brew install swiftlint
+- Создайте новый скипт в проекте в Build Phases и перетащите его до компиляции 
+- Скопируйте и вставьте следуйщий скрипт: 
+
+- export PATH="$PATH:/opt/homebrew/bin"
+if which swiftlint > /dev/null; then
+  swiftlint
+else
+  echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+fi
 
 ## Getting Started
 
