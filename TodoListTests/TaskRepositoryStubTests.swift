@@ -9,14 +9,11 @@ import XCTest
 @testable import TodoList
 
 final class TaskRepositoryStubTests: XCTestCase {
-	private func makeSut() -> TaskRepositoryStub {
-		return TaskRepositoryStub()
-	}
 
-	func test_getTasks_shouldBeGreaterThanOne() {
+	func test_getTasks_shouldBeNotEmpty() {
 
 		// arrange
-		let sut = makeSut()
+		let sut = makeSUT()
 
 		// act
 		let tasks = sut.getTasks()
@@ -27,5 +24,9 @@ final class TaskRepositoryStubTests: XCTestCase {
 			0,
 			"Список задач пуст"
 		)
+	}
+
+	private func makeSUT() -> TaskRepositoryStub {
+		TaskRepositoryStub()
 	}
 }
