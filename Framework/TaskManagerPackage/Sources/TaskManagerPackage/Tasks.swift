@@ -61,7 +61,7 @@ public final class ImportantTask: Task {
 	/// Приоритет задания.
 	public var taskPriority: TaskPriority
 
-	public init(title: String, taskPriority: TaskPriority, createDate: Date = Date()) {
+	public init(title: String, taskPriority: TaskPriority, createDate: Date = Date(), isComplete: Bool = false) {
 		self.taskPriority = taskPriority
 		self.createDate = createDate
 		super.init(title: title)
