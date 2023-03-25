@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		2036F06C29C70F3200180C5B /* SectionForTaskManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */; };
 		20ABDBBF29C0C1DE0015104D /* TaskManagerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 20ABDBBE29C0C1DE0015104D /* TaskManagerPackage */; };
+		20E8F42129CD971800AA2B73 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F41E29CD971800AA2B73 /* LoginViewControllerTests.swift */; };
+		20E8F42229CD971800AA2B73 /* LoginInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F41F29CD971800AA2B73 /* LoginInteractorTests.swift */; };
+		20E8F42329CD971800AA2B73 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42029CD971800AA2B73 /* LoginPresenterTests.swift */; };
+		20E8F42829CD973000AA2B73 /* LoginInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42429CD973000AA2B73 /* LoginInteractorSpy.swift */; };
+		20E8F42929CD973000AA2B73 /* LoginPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42529CD973000AA2B73 /* LoginPresenterSpy.swift */; };
+		20E8F42A29CD973000AA2B73 /* LoginWorkerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42629CD973000AA2B73 /* LoginWorkerSpy.swift */; };
+		20E8F42B29CD973000AA2B73 /* LoginViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42729CD973000AA2B73 /* LoginViewControllerSpy.swift */; };
 		E7316DB429C74102007E7F06 /* TaskRepositoryStubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7316DB329C74102007E7F06 /* TaskRepositoryStubTests.swift */; };
 		E7316DB929C846A0007E7F06 /* LoginWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7316DB829C846A0007E7F06 /* LoginWorkerTests.swift */; };
 		F551A17C29B9CF9500C006AF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A17B29B9CF9500C006AF /* LoginRouter.swift */; };
@@ -44,6 +51,13 @@
 /* Begin PBXFileReference section */
 		2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionForTaskManagerAdapter.swift; sourceTree = "<group>"; };
 		20ABDBBC29C0C1CB0015104D /* TaskManagerPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TaskManagerPackage; path = Framework/TaskManagerPackage; sourceTree = "<group>"; };
+		20E8F41E29CD971800AA2B73 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		20E8F41F29CD971800AA2B73 /* LoginInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractorTests.swift; sourceTree = "<group>"; };
+		20E8F42029CD971800AA2B73 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		20E8F42429CD973000AA2B73 /* LoginInteractorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractorSpy.swift; sourceTree = "<group>"; };
+		20E8F42529CD973000AA2B73 /* LoginPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenterSpy.swift; sourceTree = "<group>"; };
+		20E8F42629CD973000AA2B73 /* LoginWorkerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWorkerSpy.swift; sourceTree = "<group>"; };
+		20E8F42729CD973000AA2B73 /* LoginViewControllerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpy.swift; sourceTree = "<group>"; };
 		E71D90EA29BDB85F003419D4 /* TodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7316DB329C74102007E7F06 /* TaskRepositoryStubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskRepositoryStubTests.swift; path = TodoListTests/TaskRepositoryStubTests.swift; sourceTree = SOURCE_ROOT; };
 		E7316DB829C846A0007E7F06 /* LoginWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorkerTests.swift; sourceTree = "<group>"; };
@@ -103,9 +117,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		20E8F41C29CD962F00AA2B73 /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				20E8F41F29CD971800AA2B73 /* LoginInteractorTests.swift */,
+				20E8F42029CD971800AA2B73 /* LoginPresenterTests.swift */,
+				20E8F41E29CD971800AA2B73 /* LoginViewControllerTests.swift */,
+				20E8F41D29CD96B800AA2B73 /* TestDoubles */,
+			);
+			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		20E8F41D29CD96B800AA2B73 /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				20E8F42429CD973000AA2B73 /* LoginInteractorSpy.swift */,
+				20E8F42529CD973000AA2B73 /* LoginPresenterSpy.swift */,
+				20E8F42729CD973000AA2B73 /* LoginViewControllerSpy.swift */,
+				20E8F42629CD973000AA2B73 /* LoginWorkerSpy.swift */,
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
 		E71D90EB29BDB85F003419D4 /* TodoListTests */ = {
 			isa = PBXGroup;
 			children = (
+				20E8F41C29CD962F00AA2B73 /* LoginScene */,
 				E7316DB329C74102007E7F06 /* TaskRepositoryStubTests.swift */,
 				E7316DB829C846A0007E7F06 /* LoginWorkerTests.swift */,
 			);
@@ -318,8 +355,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20E8F42229CD971800AA2B73 /* LoginInteractorTests.swift in Sources */,
+				20E8F42129CD971800AA2B73 /* LoginViewControllerTests.swift in Sources */,
 				E7316DB429C74102007E7F06 /* TaskRepositoryStubTests.swift in Sources */,
+				20E8F42B29CD973000AA2B73 /* LoginViewControllerSpy.swift in Sources */,
+				20E8F42829CD973000AA2B73 /* LoginInteractorSpy.swift in Sources */,
 				E7316DB929C846A0007E7F06 /* LoginWorkerTests.swift in Sources */,
+				20E8F42329CD971800AA2B73 /* LoginPresenterTests.swift in Sources */,
+				20E8F42A29CD973000AA2B73 /* LoginWorkerSpy.swift in Sources */,
+				20E8F42929CD973000AA2B73 /* LoginPresenterSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
