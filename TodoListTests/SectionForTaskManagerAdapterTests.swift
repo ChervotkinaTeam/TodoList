@@ -12,18 +12,7 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 
 	private let mockTaskManager = MockTaskManager()
 
-	func test_getSections_shouldBe2Sections() throws {
-		// arrange
-		let sut = makeSut()
-
-		// act
-		let currentSectionCount = sut.getSections().count
-
-		// assert
-		XCTAssertEqual(currentSectionCount, 2, "Количества секций должно быть 2 ")
-	}
-
-	func test_getSections_shouldBeEqualToUncompletedAndCompleted() throws {
+	func test_getSections_shouldBeEqualToUncompletedAndCompleted() {
 		// arrange
 		let sut = makeSut()
 
@@ -34,7 +23,7 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 		XCTAssertEqual(section, [.uncompleted, .completed], "Должны быть две секции .uncompleted и .completed")
 	}
 
-	func test_getSectionIndex_forSectionShoudBeReturnValidIndex() throws {
+	func test_getSectionIndex_forSectionShoudBeReturnValidIndex() {
 		// arrange
 		let sut = makeSut()
 
@@ -50,7 +39,29 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 
 	}
 
-	func test_getTasksForSection_ShouldBe2CompletedTaskForSectionCompleted() throws {
+	func test_getSection_forIndex0_sholdBeUncompleted() {
+		// arrange
+		let sut = makeSut()
+
+		// act
+		let uncompletedSection = sut.getSection(forIndex: 0)
+
+		// assert
+		XCTAssertEqual(uncompletedSection, .uncompleted, "Под индексом 0 должна быть секция uncompleted")
+	}
+
+	func test_getSection_forIndex1_sholdBeСompleted() {
+		// arrange
+		let sut = makeSut()
+
+		// act
+		let completedSection = sut.getSection(forIndex: 1)
+
+		// assert
+		XCTAssertEqual(completedSection, .completed, "Под индексом 1 должна быть секция completed")
+	}
+
+	func test_getTasksForSection_ShouldBe2CompletedTaskForSectionCompleted() {
 		// arrange
 		let sut = makeSut()
 
@@ -64,7 +75,7 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 			"Секция completed должна содержать 2 завершенные задачи")
 	}
 
-	func test_getTasksForSection_ShouldBe4UnCompletedTaskForSectionUnCompleted() throws {
+	func test_getTasksForSection_ShouldBe4UnCompletedTaskForSectionUnCompleted() {
 		// arrange
 		let sut = makeSut()
 
@@ -75,10 +86,10 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 		XCTAssertEqual(
 			unCompletedTasks,
 			mockTaskManager.uncompletedTasks(),
-			"Секция completed должна содержать 4 незавершенные задачи")
+			"Секция uncompleted должна содержать 4 незавершенные задачи")
 	}
 
-	func test_getTasksForSection_ShouldBe6TaskForSectionAll() throws {
+	func test_getTasksForSection_ShouldBe6TaskForSectionAll() {
 		// arrange
 		let sut = makeSut()
 
