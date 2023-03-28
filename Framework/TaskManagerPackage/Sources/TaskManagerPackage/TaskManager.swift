@@ -10,7 +10,11 @@ public final class TaskManager {
 
 	private var taskList = [Task]()
 
-	public init() {}
+	/// Инициализатор.
+	/// - Parameter taskList: Массив заданий.
+	public init(taskList: [Task] = [Task]()) {
+		self.taskList = taskList
+	}
 
 	/// Список всех заданий.
 	/// - Returns: Массив заданий.
