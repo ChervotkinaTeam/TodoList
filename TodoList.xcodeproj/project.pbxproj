@@ -159,12 +159,12 @@
 			isa = PBXGroup;
 			children = (
 				F551A18729B9CFEB00C006AF /* LoginScene */,
-				F551A18329B9CFEB00C006AF /* TodoListScreen */,
+				F551A18329B9CFEB00C006AF /* TodoListScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		F551A18329B9CFEB00C006AF /* TodoListScreen */ = {
+		F551A18329B9CFEB00C006AF /* TodoListScene */ = {
 			isa = PBXGroup;
 			children = (
 				2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */,
@@ -174,7 +174,7 @@
 				F551A18629B9CFEB00C006AF /* TodoListModel.swift */,
 				F551A1A829B9EA7100C006AF /* TodoListAssembler.swift */,
 			);
-			path = TodoListScreen;
+			path = TodoListScene;
 			sourceTree = "<group>";
 		};
 		F551A18729B9CFEB00C006AF /* LoginScene */ = {
