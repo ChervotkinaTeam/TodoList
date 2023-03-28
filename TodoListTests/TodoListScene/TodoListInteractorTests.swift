@@ -10,7 +10,7 @@ import XCTest
 
 final class TodoListInteractorTests: XCTestCase {
 
-	private let sectionManager = MockSectionForTaskManagerAdapter()
+	private let sectionManager = SectionForTaskManagerAdapter(taskManager: MockTaskManager())
 	private let presenter = TodoListPresenterSpy()
 
 	func test_fetchData_shouldCallPresenter() {

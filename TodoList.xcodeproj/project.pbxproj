@@ -12,7 +12,6 @@
 		2029757429CDD92200CF4730 /* TodoListInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757329CDD92200CF4730 /* TodoListInteractorSpy.swift */; };
 		2029757629CDD9F100CF4730 /* TodoListViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757529CDD9F100CF4730 /* TodoListViewControllerSpy.swift */; };
 		2029757829CDDB3F00CF4730 /* TodoListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757729CDDB3F00CF4730 /* TodoListInteractorTests.swift */; };
-		2029757A29CDE9B900CF4730 /* MockSectionForTaskManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757929CDE9B900CF4730 /* MockSectionForTaskManagerAdapter.swift */; };
 		2029757C29CEAC3800CF4730 /* TodoListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757B29CEAC3800CF4730 /* TodoListViewControllerTests.swift */; };
 		2029757E29CEB86100CF4730 /* TodoListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757D29CEB86100CF4730 /* TodoListPresenterTests.swift */; };
 		2036F06C29C70F3200180C5B /* SectionForTaskManagerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */; };
@@ -64,7 +63,6 @@
 		2029757329CDD92200CF4730 /* TodoListInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractorSpy.swift; sourceTree = "<group>"; };
 		2029757529CDD9F100CF4730 /* TodoListViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewControllerSpy.swift; sourceTree = "<group>"; };
 		2029757729CDDB3F00CF4730 /* TodoListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractorTests.swift; sourceTree = "<group>"; };
-		2029757929CDE9B900CF4730 /* MockSectionForTaskManagerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSectionForTaskManagerAdapter.swift; sourceTree = "<group>"; };
 		2029757B29CEAC3800CF4730 /* TodoListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewControllerTests.swift; sourceTree = "<group>"; };
 		2029757D29CEB86100CF4730 /* TodoListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenterTests.swift; sourceTree = "<group>"; };
 		2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionForTaskManagerAdapter.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 				2029757329CDD92200CF4730 /* TodoListInteractorSpy.swift */,
 				2029757129CDD82B00CF4730 /* TodoListPresenterSpy.swift */,
 				2029757529CDD9F100CF4730 /* TodoListViewControllerSpy.swift */,
-				2029757929CDE9B900CF4730 /* MockSectionForTaskManagerAdapter.swift */,
 				2019821B29D09473001D31F2 /* TodoListTableViewSpy.swift */,
 			);
 			path = TestDoubles;
@@ -402,7 +399,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2029757C29CEAC3800CF4730 /* TodoListViewControllerTests.swift in Sources */,
-				2029757A29CDE9B900CF4730 /* MockSectionForTaskManagerAdapter.swift in Sources */,
 				2029757E29CEB86100CF4730 /* TodoListPresenterTests.swift in Sources */,
 				20E8F42229CD971800AA2B73 /* LoginInteractorTests.swift in Sources */,
 				20E8F42129CD971800AA2B73 /* LoginViewControllerTests.swift in Sources */,
