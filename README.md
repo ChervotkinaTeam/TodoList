@@ -7,20 +7,34 @@
 - Decorator
 - Adapter
 - DI
-- MVP
-
-## L1M6 Home Work
-
-- Переход от использования MVC к MVP.
+- CleanSwift
 
 ## Getting Started
 
+- Установите менеджер недостающих пакетов для macOS Homebrew с помощью команды в терминале 
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+- Скачайте и установите SwiftLint - утилиту для автоматической проверки Swift-кода
+```
+brew install swiftlint
+```
+
+- Клонируйте репозиторий
 ```
 cd ~/Developer
 git clone https://github.com/some/TodoList.git
 cd ./TodoList
 xed .
 ```
+
+- Запустите файл TodoList.xcodeproj
+
+## Авторизация
+логин: 1
+пароль: 1
+
 ## Features
 
 - Отображение списка задач с разбиением на секции по критерию выполненности.
@@ -34,5 +48,5 @@ xed .
 
 - Написано на Swift 5;
 - Поддерживается версия iOS 14;
-- Зависимостей от сторонних библиотек нет;
-- Необходим Xcode 14 или выше.
+- Необходим Xcode 14+;
+- SwiftLint.

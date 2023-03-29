@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import TaskManagerPackage
 
 protocol ITodoListInteractor {
 	func fetchData()

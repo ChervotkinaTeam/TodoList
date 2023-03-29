@@ -8,34 +8,34 @@
 import Foundation
 
 /// Задание, для ведения списка дел.
-class Task {
+public class Task {
 
 	/// Наименование задания.
-	var title: String
+	public var title: String
 
 	/// Состояние задания -- выполнено ли задание.
-	var isComplete = false
+	public var isComplete = false
 
-	init(title: String, isComplete: Bool = false) {
+	public init(title: String, isComplete: Bool = false) {
 		self.title = title
 		self.isComplete = isComplete
 	}
 }
 
 extension Task: Equatable {
-	static func == (lhs: Task, rhs: Task) -> Bool {
+	public static func == (lhs: Task, rhs: Task) -> Bool {
 		lhs.title == rhs.title && lhs.isComplete == rhs.isComplete
 	}
 }
 
 /// Обычное задание.
-final class RegularTask: Task { }
+public final class RegularTask: Task { }
 
 /// Важное задание с приоритетом.
-final class ImportantTask: Task {
+public final class ImportantTask: Task {
 
 	/// Приоритет задания. Приоритет влияет на крайний срок выполнения задания.
-	enum TaskPriority: Int {
+	public enum TaskPriority: Int {
 		/// Низкий приоритет. На выполнение задания с низким приоритетом, отводится 3 дня.
 		case low
 		/// Средний приоритет. На выполнение задания со средним приоритетом, отводится 2 дня.
@@ -45,7 +45,7 @@ final class ImportantTask: Task {
 	}
 
 	/// Крайний срок выполнения задания.
-	var deadLine: Date {
+	public var deadLine: Date {
 		switch taskPriority {
 		case .low:
 			return Calendar.current.date(byAdding: .day, value: 3, to: createDate) ?? createDate
@@ -59,9 +59,9 @@ final class ImportantTask: Task {
 	private let createDate: Date
 
 	/// Приоритет задания.
-	var taskPriority: TaskPriority
+	public var taskPriority: TaskPriority
 
-	init(title: String, taskPriority: TaskPriority, createDate: Date = Date()) {
+	public init(title: String, taskPriority: TaskPriority, createDate: Date = Date(), isComplete: Bool = false) {
 		self.taskPriority = taskPriority
 		self.createDate = createDate
 		super.init(title: title)
