@@ -16,5 +16,4 @@ final class TodoListViewControllerSpy: ITodoListViewController {
 	func render(viewData: TodoList.TodoListModel.ViewModel) {
 		isCalledRender = true
 	}
-
 }

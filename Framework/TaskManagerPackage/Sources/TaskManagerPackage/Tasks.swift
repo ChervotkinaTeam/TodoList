@@ -16,6 +16,10 @@ public class Task {
 	/// Состояние задания -- выполнено ли задание.
 	public var isComplete = false
 
+	/// Инициализатор.
+	/// - Parameters:
+	///   - title: Наименование задания
+	///   - isComplete: Состояние задания
 	public init(title: String, isComplete: Bool = false) {
 		self.title = title
 		self.isComplete = isComplete

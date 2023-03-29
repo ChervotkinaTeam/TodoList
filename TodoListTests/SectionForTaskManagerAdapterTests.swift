@@ -36,7 +36,6 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 		XCTAssertEqual(uncompletedSectionIndex, 0, "Индекс Section.uncompleted должен быть равен 0")
 		XCTAssertEqual(completedSectionIndex, 1, "Индекс Section.completed должен быть равен 1")
 		XCTAssertEqual(allSectionIndex, 0, "Индекс Section.all должен быть равен 0")
-
 	}
 
 	func test_getSection_forIndex0_sholdBeUncompleted() {
@@ -50,7 +49,7 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 		XCTAssertEqual(uncompletedSection, .uncompleted, "Под индексом 0 должна быть секция uncompleted")
 	}
 
-	func test_getSection_forIndex1_sholdBeСompleted() {
+	func test_getSection_forIndex1_sholdBeCompleted() {
 		// arrange
 		let sut = makeSut()
 
@@ -72,7 +71,8 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 		XCTAssertEqual(
 			completedTasks,
 			mockTaskManager.completedTasks(),
-			"Секция completed должна содержать 2 завершенные задачи")
+			"Секция completed должна содержать 2 завершенные задачи"
+		)
 	}
 
 	func test_getTasksForSection_ShouldBe4UnCompletedTaskForSectionUnCompleted() {
@@ -86,7 +86,8 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 		XCTAssertEqual(
 			unCompletedTasks,
 			mockTaskManager.uncompletedTasks(),
-			"Секция uncompleted должна содержать 4 незавершенные задачи")
+			"Секция uncompleted должна содержать 4 незавершенные задачи"
+		)
 	}
 
 	func test_getTasksForSection_ShouldBe6TaskForSectionAll() {
@@ -100,9 +101,9 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 		XCTAssertEqual(
 			allTasks,
 			mockTaskManager.allTasks(),
-			"Секция all должна содержать 6 задач")
+			"Секция all должна содержать 6 задач"
+		)
 	}
-
 }
 
 private extension SectionForTaskManagerAdapterTests {

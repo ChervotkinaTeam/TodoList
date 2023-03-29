@@ -16,7 +16,7 @@ final class ImportantTaskTests: XCTestCase {
 		let sut = ImportantTask(title: "Test task", taskPriority: .low, createDate: create)
 
 		// act
-		let deadline = Calendar.current.date(byAdding: .day, value: 3, to: create)!
+		let deadline = Calendar.current.date(byAdding: .day, value: 3, to: create)! // swiftlint:disable:this force_unwrapping
 
 		// assert
 		XCTAssertEqual(sut.deadLine, deadline, "Deadline для задачи с приоритетом Low выходит за рамки 3х дней.")
@@ -27,7 +27,7 @@ final class ImportantTaskTests: XCTestCase {
 		let sut = ImportantTask(title: "Test task", taskPriority: .medium, createDate: create)
 
 		// act
-		let deadline = Calendar.current.date(byAdding: .day, value: 2, to: create)!
+		let deadline = Calendar.current.date(byAdding: .day, value: 2, to: create)! // swiftlint:disable:this force_unwrapping
 
 		// assert
 		XCTAssertEqual(sut.deadLine, deadline, "Deadline для задачи с приоритетом Medium выходит за рамки 2х дней.")
@@ -39,7 +39,7 @@ final class ImportantTaskTests: XCTestCase {
 		let sut = ImportantTask(title: "Test task", taskPriority: .high, createDate: create)
 
 		// act
-		let deadline = Calendar.current.date(byAdding: .day, value: 1, to: create)!
+		let deadline = Calendar.current.date(byAdding: .day, value: 1, to: create)! // swiftlint:disable:this force_unwrapping
 
 		// assert
 		XCTAssertEqual(sut.deadLine, deadline, "Deadline для задачи с приоритетом High выходит за рамки 1го дня.")
