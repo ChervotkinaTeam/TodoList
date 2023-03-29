@@ -13,10 +13,14 @@ class OrderedTaskManagerTests: XCTestCase {
 	func test_allTasks_shouldBe5TaskOrderedByPriority() {
 		// arrange
 		let sut = makeSut()
-		let validResultTasks: [TaskManagerPackage.Task] = [
-			MockTaskManager.highImportantTask,
-			MockTaskManager.mediumImportantTask,
-			MockTaskManager.lowImportantTask,
+		let validResultTasks: [TaskManagerPackage.Task] =
+		[
+			MockTaskManager.uncompletedHighImportantTask,
+			MockTaskManager.completedHighImportantTask,
+			MockTaskManager.uncompletedMediumImportantTask,
+			MockTaskManager.completedMediumImportantTask,
+			MockTaskManager.completedLowImportantTask,
+			MockTaskManager.uncompletedLowImportantTask,
 			MockTaskManager.uncompletedRegularTask,
 			MockTaskManager.completedRegularTask
 		]
@@ -24,8 +28,10 @@ class OrderedTaskManagerTests: XCTestCase {
 		// act
 		let resultTasks = sut.allTasks()
 
+		resultTasks.forEach { print($0.title) }
+
 		// assert
-		XCTAssertEqual(resultTasks.count, 5, "При выборке всех задач, ожидалось, что их будет 5.")
+		XCTAssertEqual(resultTasks.count, 8, "При выборке всех задач, ожидалось, что их будет 8.")
 		XCTAssertEqual(
 			resultTasks,
 			validResultTasks,
@@ -36,13 +42,19 @@ class OrderedTaskManagerTests: XCTestCase {
 	func test_completedTasks_shouldBeAllCompletedTaskOrderedByPriority() {
 		// arrange
 		let sut = makeSut()
-		let validResultTasks: [TaskManagerPackage.Task] = [MockTaskManager.completedRegularTask]
+		let validResultTasks: [TaskManagerPackage.Task] =
+		[
+			MockTaskManager.completedHighImportantTask,
+			MockTaskManager.completedMediumImportantTask,
+			MockTaskManager.completedLowImportantTask,
+			MockTaskManager.completedRegularTask
+		]
 
 		// act
 		let resultTasks = sut.completedTasks()
 
 		// assert
-		XCTAssertEqual(resultTasks.count, 1, "При выборке завершенных задач, ожидалось, что их будет 1.")
+		XCTAssertEqual(resultTasks.count, 4, "При выборке завершенных задач, ожидалось, что их будет 4.")
 		XCTAssertEqual(
 			resultTasks,
 			validResultTasks,
@@ -53,10 +65,11 @@ class OrderedTaskManagerTests: XCTestCase {
 	func test_uncompletedTasks_shouldBeAllUncompletedTaskOrderedByPriority() {
 		// arrange
 		let sut = makeSut()
-		let validResultTasks: [TaskManagerPackage.Task] = [
-			MockTaskManager.highImportantTask,
-			MockTaskManager.mediumImportantTask,
-			MockTaskManager.lowImportantTask,
+		let validResultTasks: [TaskManagerPackage.Task] =
+		[
+			MockTaskManager.uncompletedHighImportantTask,
+			MockTaskManager.uncompletedMediumImportantTask,
+			MockTaskManager.uncompletedLowImportantTask,
 			MockTaskManager.uncompletedRegularTask
 		]
 
