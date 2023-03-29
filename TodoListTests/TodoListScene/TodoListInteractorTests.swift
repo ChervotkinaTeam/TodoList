@@ -24,13 +24,12 @@ final class TodoListInteractorTests: XCTestCase {
 	func test_didTaskSelected_withValidRequest_shouldCallPresenter() {
 		let sut = makeSut()
 
-		let indexPath =  IndexPath(row: 0, section: 0)
+		let indexPath = IndexPath(row: 0, section: 0)
 		let request = TodoListModel.Request.TaskSelected(indexPath: indexPath)
 		sut.didTaskSelected(atIndex: request)
 
 		XCTAssertTrue(presenter.isCalledPresent, "Не вызван presenter.present(:)")
 	}
-
 }
 
 private extension TodoListInteractorTests {

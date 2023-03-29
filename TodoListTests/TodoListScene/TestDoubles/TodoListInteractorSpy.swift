@@ -23,5 +23,4 @@ final class TodoListInteractorSpy: ITodoListInteractor {
 	func didTaskSelected(atIndex: TodoList.TodoListModel.Request.TaskSelected) {
 		isCalledPresent = true
 	}
-
 }
