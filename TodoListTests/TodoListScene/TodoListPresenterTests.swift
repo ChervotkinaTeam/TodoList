@@ -20,7 +20,6 @@ final class TodoListPresenterTests: XCTestCase {
 
 		XCTAssertTrue(viewController.isCalledRender, "Не вызван viewController.render(:)")
 	}
-
 }
 
 private extension TodoListPresenterTests {

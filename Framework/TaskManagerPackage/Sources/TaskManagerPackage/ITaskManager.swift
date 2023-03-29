@@ -7,9 +7,17 @@
 
 /// Протокол для TaskManager
 public protocol ITaskManager {
+
+	/// Возвращает все задания.
 	func allTasks() -> [Task]
+
+	/// Возвращает все завешенные задания.
 	func completedTasks() -> [Task]
+
+	/// Возвращает все НЕзавершенные задания.
 	func uncompletedTasks() -> [Task]
+
+	/// Добавляет список заданий.
 	func addTasks(tasks: [Task])
 }
 

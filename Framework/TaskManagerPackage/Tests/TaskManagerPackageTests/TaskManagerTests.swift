@@ -109,7 +109,8 @@ final class TaskManagerTests: XCTestCase {
 
 		// assert
 		XCTAssertEqual(
-			allTasks.count, 1,
+			allTasks.count,
+			1,
 			"После удаления завершенной задачи из спика из 2х задач, осталось больше или меньше 1 задачи."
 		)
 		XCTAssertFalse(
