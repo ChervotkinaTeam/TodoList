@@ -28,8 +28,6 @@ class OrderedTaskManagerTests: XCTestCase {
 		// act
 		let resultTasks = sut.allTasks()
 
-		resultTasks.forEach { print($0.title) }
-
 		// assert
 		XCTAssertEqual(resultTasks.count, 8, "При выборке всех задач, ожидалось, что их будет 8.")
 		XCTAssertEqual(
