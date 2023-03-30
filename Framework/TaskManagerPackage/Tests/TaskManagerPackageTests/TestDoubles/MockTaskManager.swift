@@ -8,31 +8,60 @@
 @testable import TaskManagerPackage
 
 class MockTaskManager: ITaskManager {
-	static let highImportantTask = ImportantTask(title: "highImportantTask", taskPriority: .high)
-	static let mediumImportantTask = ImportantTask(title: "mediumImportantTask", taskPriority: .medium)
-	static let lowImportantTask = ImportantTask(title: "lowImportantTask", taskPriority: .low)
+	static let uncompletedHighImportantTask = ImportantTask(
+		title: "uncompletedHighImportantTask",
+		taskPriority: .high
+	)
+	static let uncompletedMediumImportantTask = ImportantTask(
+		title: "uncompletedMediumImportantTask",
+		taskPriority: .medium
+	)
+	static let uncompletedLowImportantTask = ImportantTask(
+		title: "uncompletedLowImportantTask",
+		taskPriority: .low
+	)
+	static let completedHighImportantTask = ImportantTask(
+		title: "completedHighImportantTask",
+		taskPriority: .high
+	)
+	static let completedMediumImportantTask = ImportantTask(
+		title: "completedMediumImportantTask",
+		taskPriority: .medium
+	)
+	static let completedLowImportantTask = ImportantTask(
+		title: "completedLowImportantTask",
+		taskPriority: .low
+	)
+	static let uncompletedRegularTask = RegularTask(title: "uncompletedRegularTask")
 	static let completedRegularTask = RegularTask(title: "completedRegularTask", isComplete: true)
-	static let uncompletedRegularTask = RegularTask(title: "regularTask")
 
 	func allTasks() -> [TaskManagerPackage.Task] {
 		[
-			MockTaskManager.highImportantTask,
-			MockTaskManager.lowImportantTask,
+			MockTaskManager.completedLowImportantTask,
+			MockTaskManager.uncompletedHighImportantTask,
+			MockTaskManager.uncompletedLowImportantTask,
 			MockTaskManager.completedRegularTask,
-			MockTaskManager.mediumImportantTask,
-			MockTaskManager.uncompletedRegularTask
+			MockTaskManager.uncompletedMediumImportantTask,
+			MockTaskManager.completedHighImportantTask,
+			MockTaskManager.uncompletedRegularTask,
+			MockTaskManager.completedMediumImportantTask
 		]
 	}
 
 	func completedTasks() -> [TaskManagerPackage.Task] {
-		[MockTaskManager.completedRegularTask]
+		[
+			MockTaskManager.completedLowImportantTask,
+			MockTaskManager.completedRegularTask,
+			MockTaskManager.completedHighImportantTask,
+			MockTaskManager.completedMediumImportantTask
+		]
 	}
 
 	func uncompletedTasks() -> [TaskManagerPackage.Task] {
 		[
-			MockTaskManager.highImportantTask,
-			MockTaskManager.lowImportantTask,
-			MockTaskManager.mediumImportantTask,
+			MockTaskManager.uncompletedHighImportantTask,
+			MockTaskManager.uncompletedLowImportantTask,
+			MockTaskManager.uncompletedMediumImportantTask,
 			MockTaskManager.uncompletedRegularTask
 		]
 	}
