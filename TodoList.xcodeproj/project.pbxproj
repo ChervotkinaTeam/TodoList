@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2013A1B829D6CC5900CADDD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2013A1B629D6CC5900CADDD4 /* LaunchScreen.storyboard */; };
 		2019821C29D09473001D31F2 /* TodoListTableViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019821B29D09473001D31F2 /* TodoListTableViewSpy.swift */; };
 		2029757229CDD82B00CF4730 /* TodoListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757129CDD82B00CF4730 /* TodoListPresenterSpy.swift */; };
 		2029757429CDD92200CF4730 /* TodoListInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757329CDD92200CF4730 /* TodoListInteractorSpy.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2013A1B729D6CC5900CADDD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2019821B29D09473001D31F2 /* TodoListTableViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewSpy.swift; sourceTree = "<group>"; };
 		2029757129CDD82B00CF4730 /* TodoListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenterSpy.swift; sourceTree = "<group>"; };
 		2029757329CDD92200CF4730 /* TodoListInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractorSpy.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				F551A18229B9CFEB00C006AF /* Scenes */,
 				F5DAE3BD29A3D29C0054AC5C /* AppDelegate.swift */,
 				F5DAE3BF29A3D29C0054AC5C /* SceneDelegate.swift */,
+				2013A1B629D6CC5900CADDD4 /* LaunchScreen.storyboard */,
 				F5DAE3C629A3D29D0054AC5C /* Assets.xcassets */,
 				F5DAE3CB29A3D29D0054AC5C /* Info.plist */,
 			);
@@ -359,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5DAE3C729A3D29D0054AC5C /* Assets.xcassets in Resources */,
+				2013A1B829D6CC5900CADDD4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +447,17 @@
 			targetProxy = E71D90EE29BDB85F003419D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2013A1B629D6CC5900CADDD4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2013A1B729D6CC5900CADDD4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E71D90F029BDB85F003419D4 /* Debug */ = {
