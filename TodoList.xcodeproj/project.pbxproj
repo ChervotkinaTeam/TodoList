@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2019821C29D09473001D31F2 /* TodoListTableViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019821B29D09473001D31F2 /* TodoListTableViewSpy.swift */; };
+		2019821F29D4034A001D31F2 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 2019821E29D4034A001D31F2 /* PinLayout */; };
+		2019822229D43F4F001D31F2 /* UIViewController+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019822129D43F4F001D31F2 /* UIViewController+Preview.swift */; };
 		2029757229CDD82B00CF4730 /* TodoListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757129CDD82B00CF4730 /* TodoListPresenterSpy.swift */; };
 		2029757429CDD92200CF4730 /* TodoListInteractorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757329CDD92200CF4730 /* TodoListInteractorSpy.swift */; };
 		2029757629CDD9F100CF4730 /* TodoListViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029757529CDD9F100CF4730 /* TodoListViewControllerSpy.swift */; };
@@ -59,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		2019821B29D09473001D31F2 /* TodoListTableViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewSpy.swift; sourceTree = "<group>"; };
+		2019822129D43F4F001D31F2 /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
 		2029757129CDD82B00CF4730 /* TodoListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenterSpy.swift; sourceTree = "<group>"; };
 		2029757329CDD92200CF4730 /* TodoListInteractorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListInteractorSpy.swift; sourceTree = "<group>"; };
 		2029757529CDD9F100CF4730 /* TodoListViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewControllerSpy.swift; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2019821F29D4034A001D31F2 /* PinLayout in Frameworks */,
 				20ABDBBF29C0C1DE0015104D /* TaskManagerPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +124,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2019822029D43F11001D31F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2019822129D43F4F001D31F2 /* UIViewController+Preview.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2029756F29CDD7E100CF4730 /* TodoListScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,10 +172,10 @@
 		20E8F41C29CD962F00AA2B73 /* LoginScene */ = {
 			isa = PBXGroup;
 			children = (
+				20E8F41D29CD96B800AA2B73 /* TestDoubles */,
 				20E8F41F29CD971800AA2B73 /* LoginInteractorTests.swift */,
 				20E8F42029CD971800AA2B73 /* LoginPresenterTests.swift */,
 				20E8F41E29CD971800AA2B73 /* LoginViewControllerTests.swift */,
-				20E8F41D29CD96B800AA2B73 /* TestDoubles */,
 			);
 			path = LoginScene;
 			sourceTree = "<group>";
@@ -261,6 +273,7 @@
 			children = (
 				F551A18D29B9CFEB00C006AF /* Managers */,
 				F551A18229B9CFEB00C006AF /* Scenes */,
+				2019822029D43F11001D31F2 /* Extensions */,
 				F5DAE3BD29A3D29C0054AC5C /* AppDelegate.swift */,
 				F5DAE3BF29A3D29C0054AC5C /* SceneDelegate.swift */,
 				F5DAE3C329A3D29C0054AC5C /* Main.storyboard */,
@@ -308,6 +321,7 @@
 			name = TodoList;
 			packageProductDependencies = (
 				20ABDBBE29C0C1DE0015104D /* TaskManagerPackage */,
+				2019821E29D4034A001D31F2 /* PinLayout */,
 			);
 			productName = CS2;
 			productReference = F5DAE3BA29A3D29C0054AC5C /* TodoList.app */;
@@ -342,6 +356,9 @@
 				Base,
 			);
 			mainGroup = F5DAE3B129A3D29C0054AC5C;
+			packageReferences = (
+				2019821D29D4034A001D31F2 /* XCRemoteSwiftPackageReference "PinLayout" */,
+			);
 			productRefGroup = F5DAE3BB29A3D29C0054AC5C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -423,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2019822229D43F4F001D31F2 /* UIViewController+Preview.swift in Sources */,
 				F551A19829B9CFEB00C006AF /* LoginPresenter.swift in Sources */,
 				F551A19B29B9CFEB00C006AF /* Repository.swift in Sources */,
 				F551A19429B9CFEB00C006AF /* TodoListModel.swift in Sources */,
@@ -733,7 +751,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		2019821D29D4034A001D31F2 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				kind = exactVersion;
+				version = 1.9.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		2019821E29D4034A001D31F2 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2019821D29D4034A001D31F2 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
 		20ABDBBE29C0C1DE0015104D /* TaskManagerPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TaskManagerPackage;
