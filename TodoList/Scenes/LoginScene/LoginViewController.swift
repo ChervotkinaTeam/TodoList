@@ -12,9 +12,10 @@ protocol ILoginViewController: AnyObject {
 }
 
 class LoginViewController: UIViewController {
-	private var textFieldLogin = UITextField()
-	private var textFieldPass = UITextField()
-	private func buttonLogin(_ sender: Any) { login() }
+
+	private lazy var buttonLogin = UIButton()
+	private lazy var textFieldLogin = UITextField()
+	private lazy var textFieldPass = UITextField()
 
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
