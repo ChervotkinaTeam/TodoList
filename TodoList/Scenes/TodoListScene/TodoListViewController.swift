@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 protocol ITodoListViewController: AnyObject {
 	func render(viewData: TodoListModel.ViewModel)
@@ -77,5 +78,13 @@ extension TodoListViewController: ITodoListViewController {
 	func render(viewData: TodoListModel.ViewModel) {
 		self.viewModel = viewData
 		tableView.reloadData()
+	}
+}
+
+struct ViewControllerProvider: PreviewProvider {
+	static var previews: some View {
+		Group {
+			TodoListViewController().preview()
+		}
 	}
 }
