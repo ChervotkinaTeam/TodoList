@@ -309,10 +309,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5DAE3CE29A3D29D0054AC5C /* Build configuration list for PBXNativeTarget "TodoList" */;
 			buildPhases = (
+				20ABDBA529BC8C650015104D /* Run SwiftLint */,
 				F5DAE3B629A3D29C0054AC5C /* Sources */,
 				F5DAE3B729A3D29C0054AC5C /* Frameworks */,
 				F5DAE3B829A3D29C0054AC5C /* Resources */,
-				20ABDBA529BC8C650015104D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -389,7 +389,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20ABDBA529BC8C650015104D /* ShellScript */ = {
+		20ABDBA529BC8C650015104D /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -399,6 +399,7 @@
 			);
 			inputPaths = (
 			);
+			name = "Run SwiftLint";
 			outputFileListPaths = (
 			);
 			outputPaths = (
