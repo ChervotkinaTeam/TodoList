@@ -74,10 +74,16 @@ private extension LoginViewController {
 	}
 
 	func layout() {
-		view.addSubview(textFieldLogin)
-		view.addSubview(textFieldPass)
-		view.addSubview(buttonLogin)
+		[
+			textFieldLogin,
+			textFieldPass,
+			buttonLogin
+		].forEach { view.addSubview($0) }
 
+		layoutConstraints()
+	}
+
+	func layoutConstraints() {
 		textFieldLogin.pin
 			.top(Sizes.PercentOfScreen.secondHalf%)
 			.horizontally(view.pin.readableMargins + Sizes.Padding.double)
