@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
 		setupUI()
 	}
 }
-//MARK: - Extensions
+// MARK: - Extensions
 extension LoginViewController: ILoginViewController {
 	func render(viewModel: LoginModels.ViewModel) {
 		switch viewModel {
