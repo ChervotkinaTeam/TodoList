@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SwiftUI
+import PinLayout
 
 protocol ILoginViewController: AnyObject {
 	func render(viewModel: LoginModels.ViewModel)
@@ -13,9 +15,9 @@ protocol ILoginViewController: AnyObject {
 
 class LoginViewController: UIViewController {
 
-	private lazy var buttonLogin = UIButton()
-	private lazy var textFieldLogin = UITextField()
-	private lazy var textFieldPass = UITextField()
+	private lazy var buttonLogin: UIButton = makeButtonLogin()
+	private lazy var textFieldLogin: UITextField = makeTextField()
+	private lazy var textFieldPass: UITextField = makeTextField()
 
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
@@ -40,12 +42,18 @@ class LoginViewController: UIViewController {
 		}
 	}
 
+	@objc
 	func login() {
 		let request = LoginModels.Request(login: loginText, password: passText)
 		interactor?.login(request: request)
 	}
-}
 
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		setupUI()
+	}
+}
+//MARK: - Extensions
 extension LoginViewController: ILoginViewController {
 	func render(viewModel: LoginModels.ViewModel) {
 		switch viewModel {
@@ -53,6 +61,71 @@ extension LoginViewController: ILoginViewController {
 			router?.routeToTodoList()
 		case .failure(let message):
 			router?.showError(message: message)
+		}
+	}
+}
+// MARK: - Private extensions
+private extension LoginViewController {
+
+	func setupUI() {
+		view.backgroundColor = .white
+
+		layout()
+	}
+
+	func layout() {
+		view.addSubview(textFieldLogin)
+		view.addSubview(textFieldPass)
+		view.addSubview(buttonLogin)
+
+		textFieldLogin.pin
+			.top(Sizes.PercentOfScreen.secondHalf%)
+			.horizontally(view.pin.readableMargins + Sizes.Padding.double)
+			.minHeight(Sizes.L.height)
+
+		textFieldPass.pin
+			.below(of: textFieldLogin, aligned: .center)
+			.size(of: textFieldLogin)
+			.margin(Sizes.Padding.normal)
+
+		buttonLogin.pin
+			.below(of: textFieldPass, aligned: .center)
+			.width(Sizes.L.width)
+			.height(Sizes.L.height)
+			.margin(Sizes.Padding.double)
+	}
+
+	func makeButtonLogin() -> UIButton {
+		let button = UIButton()
+
+		button.configuration = .filled()
+		button.configuration?.title = "Login"
+		button.configuration?.baseBackgroundColor = .systemBlue
+		button.configuration?.cornerStyle = .medium
+		button.addTarget(self, action: #selector(login), for: .touchUpInside)
+
+		return button
+	}
+
+	func makeTextField() -> UITextField {
+		let textField = UITextField()
+
+		textField.backgroundColor = .white
+		textField.textColor = .black
+		textField.layer.cornerRadius = Sizes.cornerRadius
+		textField.layer.borderWidth = Sizes.borderWidth
+		textField.layer.borderColor = UIColor.systemGray.cgColor
+		textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: Sizes.Padding.half, height: textField.frame.height))
+		textField.leftViewMode = .always
+
+		return textField
+	}
+}
+// MARK: - Preview
+struct LoginViewControllerProvider: PreviewProvider {
+	static var previews: some View {
+		Group {
+			LoginViewController().preview()
 		}
 	}
 }
