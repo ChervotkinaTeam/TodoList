@@ -19,8 +19,7 @@ final class LoginViewControllerTests: XCTestCase {
 	override func setUp() {
 		super.setUp()
 
-		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		sut = storyboard.instantiateViewController(identifier: "LoginViewController") as? LoginViewController
+		sut = LoginViewController()
 		interactor = LoginInteractorSpy()
 		sut.interactor = interactor
 		window = UIWindow()

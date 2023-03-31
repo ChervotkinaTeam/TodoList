@@ -21,8 +21,7 @@ final class TodoListViewControllerTests: XCTestCase {
 	override func setUp() {
 		super.setUp()
 
-		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		sut = storyboard.instantiateViewController(identifier: "TodoListViewController") as? TodoListViewController
+		sut = TodoListViewController()
 		interactor = TodoListInteractorSpy()
 		sut.interactor = interactor
 		window = UIWindow()

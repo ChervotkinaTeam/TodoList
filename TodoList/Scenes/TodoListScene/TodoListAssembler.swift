@@ -10,12 +10,8 @@ import TaskManagerPackage
 
 final class TodoListAssembler {
 	func assembly() -> UIViewController {
-		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		guard let viewController = storyboard.instantiateViewController(withIdentifier: "TodoListViewController") as?
-				TodoListViewController
-		else {
-			fatalError("Нету на Main.storyboard TodoListViewController!")
-		}
+
+		let viewController = TodoListViewController()
 
 		let taskManager = OrderedTaskManager(taskManager: TaskManager())
 		let repository: ITaskRepository = TaskRepositoryStub()
