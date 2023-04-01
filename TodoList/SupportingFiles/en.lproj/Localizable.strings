@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  TodoList
+
+  Created by Елена Червоткина on 01.04.2023.
+  
+*/
+
+"Authorization.toLogin" = "Login";

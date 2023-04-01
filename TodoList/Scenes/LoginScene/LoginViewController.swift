@@ -105,7 +105,7 @@ private extension LoginViewController {
 		let button = UIButton()
 
 		button.configuration = .filled()
-		button.configuration?.title = "Login"
+		button.configuration?.title = L10n.Authorization.toLogin
 		button.configuration?.baseBackgroundColor = .systemBlue
 		button.configuration?.cornerStyle = .medium
 		button.addTarget(self, action: #selector(login), for: .touchUpInside)
