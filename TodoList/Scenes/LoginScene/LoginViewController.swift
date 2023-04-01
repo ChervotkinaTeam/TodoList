@@ -52,6 +52,11 @@ class LoginViewController: UIViewController {
 		super.viewDidLoad()
 		setupUI()
 	}
+
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		layout()
+	}
 }
 // MARK: - Extensions
 extension LoginViewController: ILoginViewController {
@@ -68,9 +73,7 @@ extension LoginViewController: ILoginViewController {
 private extension LoginViewController {
 
 	func setupUI() {
-		view.backgroundColor = .white
-
-		layout()
+		view.backgroundColor = Theme.backgroundColor
 	}
 
 	func layout() {
@@ -85,7 +88,7 @@ private extension LoginViewController {
 
 	func layoutConstraints() {
 		textFieldLogin.pin
-			.top(Sizes.PercentOfScreen.secondHalf%)
+			.top(Sizes.PercentOfScreen.secondHalf)
 			.horizontally(view.pin.readableMargins + Sizes.Padding.double)
 			.minHeight(Sizes.L.height)
 
@@ -106,9 +109,10 @@ private extension LoginViewController {
 
 		button.configuration = .filled()
 		button.configuration?.title = L10n.Authorization.toLogin
-		button.configuration?.baseBackgroundColor = .systemBlue
+		button.configuration?.baseBackgroundColor = Theme.accentColor
 		button.configuration?.cornerStyle = .medium
 		button.addTarget(self, action: #selector(login), for: .touchUpInside)
+		button.translatesAutoresizingMaskIntoConstraints = true
 
 		return button
 	}
@@ -116,18 +120,23 @@ private extension LoginViewController {
 	func makeTextField() -> UITextField {
 		let textField = UITextField()
 
-		textField.backgroundColor = .white
-		textField.textColor = .black
+		textField.backgroundColor = Theme.backgroundColor
+		textField.textColor = Theme.black
 		textField.layer.cornerRadius = Sizes.cornerRadius
 		textField.layer.borderWidth = Sizes.borderWidth
-		textField.layer.borderColor = UIColor.systemGray.cgColor
+		textField.layer.borderColor = Theme.black.cgColor
 		textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: Sizes.Padding.half, height: textField.frame.height))
 		textField.leftViewMode = .always
+		textField.translatesAutoresizingMaskIntoConstraints = false
+
+		textField.font = UIFont.preferredFont(forTextStyle: .body)
+		textField.adjustsFontForContentSizeCategory = true
 
 		return textField
 	}
 }
 // MARK: - Preview
+#if DEBUG
 struct LoginViewControllerProvider: PreviewProvider {
 	static var previews: some View {
 		Group {
@@ -135,3 +144,4 @@ struct LoginViewControllerProvider: PreviewProvider {
 		}
 	}
 }
+#endif
