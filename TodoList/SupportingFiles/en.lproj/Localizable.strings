@@ -6,4 +6,14 @@
   
 */
 
+/// MARK: - Authorization
 "Authorization.toLogin" = "Login";
+
+/// MARK: - Tasks
+"Task.Priority.low" = "Low";
+"Task.Priority.medium" = "Medium";
+"Task.Priority.high" = "High";
+
+"Task.State.completed" = "Completed";
+"Task.State.uncompleted" = "Uncompleted";
+"Task.State.all" = "All";
