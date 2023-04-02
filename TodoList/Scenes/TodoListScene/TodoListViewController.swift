@@ -23,6 +23,7 @@ final class TodoListViewController: UITableViewController {
 
 		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 		tableView.dataSource = self
+		tableView.accessibilityIdentifier = AccessibilityId.tableView.rawValue
 		interactor?.fetchData()
 	}
 
@@ -74,6 +75,7 @@ final class TodoListViewController: UITableViewController {
 	}
 }
 
+// MARK: - Extensions
 extension TodoListViewController: ITodoListViewController {
 	func render(viewData: TodoListModel.ViewModel) {
 		self.viewModel = viewData
@@ -86,5 +88,12 @@ struct ViewControllerProvider: PreviewProvider {
 		Group {
 			TodoListViewController().preview()
 		}
+	}
+}
+
+// MARK: - AccessibilityId
+extension TodoListViewController {
+	enum AccessibilityId: String {
+		case tableView
 	}
 }

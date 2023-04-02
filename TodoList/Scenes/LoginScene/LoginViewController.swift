@@ -15,9 +15,9 @@ protocol ILoginViewController: AnyObject {
 
 class LoginViewController: UIViewController {
 
-	private lazy var buttonLogin: UIButton = makeButtonLogin()
-	private lazy var textFieldLogin: UITextField = makeTextField()
-	private lazy var textFieldPass: UITextField = makeTextField()
+	private lazy var buttonLogin: UIButton = makeButtonLogin(accessibilityId: .buttonLogin)
+	private lazy var textFieldLogin: UITextField = makeTextField(accessibilityId: .textFieldLogin)
+	private lazy var textFieldPass: UITextField = makeTextField(accessibilityId: .textFieldPass)
 
 	var interactor: ILoginInteractor?
 	var router: ILoginRouter?
@@ -101,7 +101,7 @@ private extension LoginViewController {
 			.margin(Sizes.Padding.double)
 	}
 
-	func makeButtonLogin() -> UIButton {
+	func makeButtonLogin(accessibilityId: AccessibilityId) -> UIButton {
 		let button = UIButton()
 
 		button.configuration = .filled()
@@ -109,11 +109,12 @@ private extension LoginViewController {
 		button.configuration?.baseBackgroundColor = .systemBlue
 		button.configuration?.cornerStyle = .medium
 		button.addTarget(self, action: #selector(login), for: .touchUpInside)
+		button.accessibilityIdentifier = accessibilityId.rawValue
 
 		return button
 	}
 
-	func makeTextField() -> UITextField {
+	func makeTextField(accessibilityId: AccessibilityId) -> UITextField {
 		let textField = UITextField()
 
 		textField.backgroundColor = .white
@@ -123,6 +124,7 @@ private extension LoginViewController {
 		textField.layer.borderColor = UIColor.systemGray.cgColor
 		textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: Sizes.Padding.half, height: textField.frame.height))
 		textField.leftViewMode = .always
+		textField.accessibilityIdentifier = accessibilityId.rawValue
 
 		return textField
 	}
@@ -133,5 +135,14 @@ struct LoginViewControllerProvider: PreviewProvider {
 		Group {
 			LoginViewController().preview()
 		}
+	}
+}
+
+// MARK: - AccessibilityId
+extension LoginViewController {
+	enum AccessibilityId: String {
+		case buttonLogin
+		case textFieldLogin
+		case textFieldPass
 	}
 }
