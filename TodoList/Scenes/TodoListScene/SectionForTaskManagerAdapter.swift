@@ -23,11 +23,11 @@ enum Section: CaseIterable {
 	var title: String {
 		switch self {
 		case .completed:
-			return "Completed"
+			return L10n.Task.State.completed
 		case .uncompleted:
-			return "Uncompleted"
+			return L10n.Task.State.uncompleted
 		case .all:
-			return "All"
+			return L10n.Task.State.all
 		}
 	}
 }
