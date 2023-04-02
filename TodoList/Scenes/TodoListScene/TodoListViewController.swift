@@ -24,6 +24,7 @@ final class TodoListViewController: UITableViewController {
 
 		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 		tableView.dataSource = self
+		tableView.accessibilityIdentifier = AccessibilityId.tableView.rawValue
 		interactor?.fetchData()
 	}
 
@@ -68,6 +69,7 @@ final class TodoListViewController: UITableViewController {
 		contentConfiguration.textProperties.font = UIFont.boldSystemFont(ofSize: 19)
 		cell.contentConfiguration = contentConfiguration
 
+		cell.accessibilityIdentifier = "\(AccessibilityId.tableViewCell.rawValue)[\(indexPath.section):\(indexPath.row)]"
 		return cell
 	}
 
@@ -76,6 +78,7 @@ final class TodoListViewController: UITableViewController {
 	}
 }
 
+// MARK: - Extensions
 extension TodoListViewController: ITodoListViewController {
 	func render(viewData: TodoListModel.ViewModel) {
 		self.viewModel = viewData
@@ -100,4 +103,11 @@ struct ViewControllerProvider: PreviewProvider {
 		}
 	}
 }
-#endif
+
+// MARK: - AccessibilityId
+extension TodoListViewController {
+	enum AccessibilityId: String {
+		case tableView
+		case tableViewCell
+	}
+}
