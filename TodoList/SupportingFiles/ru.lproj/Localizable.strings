@@ -15,5 +15,5 @@
 "Task.Priority.high" = "Высокий";
 
 "Task.State.completed" = "Завершенные";
-"Task.State.uncompleted" = "Незаверншенные";
+"Task.State.uncompleted" = "Незавершенные";
 "Task.State.all" = "Все";
