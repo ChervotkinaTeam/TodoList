@@ -67,6 +67,7 @@ final class TodoListViewController: UITableViewController {
 		contentConfiguration.textProperties.font = UIFont.boldSystemFont(ofSize: 19)
 		cell.contentConfiguration = contentConfiguration
 
+		cell.accessibilityIdentifier = "\(AccessibilityId.tableViewCell.rawValue)[\(indexPath.section):\(indexPath.row)]"
 		return cell
 	}
 
@@ -95,5 +96,6 @@ struct ViewControllerProvider: PreviewProvider {
 extension TodoListViewController {
 	enum AccessibilityId: String {
 		case tableView
+		case tableViewCell
 	}
 }
