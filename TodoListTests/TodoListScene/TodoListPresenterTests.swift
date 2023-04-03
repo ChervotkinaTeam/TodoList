@@ -28,7 +28,6 @@ private extension TodoListPresenterTests {
 	}
 
 	func makeResponse() -> TodoListModel.Response {
-		let response = TodoListModel.Response(data: [TodoListModel.Response.SectionWithTasks]())
-		return response
+		return TodoListModel.Response(data: [TodoListModel.Response.SectionWithTasks]())
 	}
 }
