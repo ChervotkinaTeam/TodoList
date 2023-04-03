@@ -14,7 +14,7 @@ protocol ITaskRepository {
 final class TaskRepositoryStub: ITaskRepository {
 	func getTasks() -> [Task] {
 		[
-			ImportantTask(title: "Do homework", taskPriority: .high),
+			ImportantTask(title: "Do homework, long long long long long long long long title", taskPriority: .high),
 			RegularTask(title: "Do Workout", isComplete: true),
 			ImportantTask(title: "Write new tasks", taskPriority: .low),
 			RegularTask(title: "Solve 3 algorithms"),
