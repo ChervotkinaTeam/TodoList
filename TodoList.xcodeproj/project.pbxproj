@@ -30,11 +30,11 @@
 		20E8F42929CD973000AA2B73 /* LoginPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42529CD973000AA2B73 /* LoginPresenterSpy.swift */; };
 		20E8F42A29CD973000AA2B73 /* LoginWorkerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42629CD973000AA2B73 /* LoginWorkerSpy.swift */; };
 		20E8F42B29CD973000AA2B73 /* LoginViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42729CD973000AA2B73 /* LoginViewControllerSpy.swift */; };
-		E7316DB429C74102007E7F06 /* TaskRepositoryStubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7316DB329C74102007E7F06 /* TaskRepositoryStubTests.swift */; };
 		E7316DB929C846A0007E7F06 /* LoginWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7316DB829C846A0007E7F06 /* LoginWorkerTests.swift */; };
 		E775E4A829D831E10056EC83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E775E4AA29D831E10056EC83 /* Localizable.strings */; };
 		E775E4C829D8462D0056EC83 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775E4C629D8462D0056EC83 /* Assets.swift */; };
 		E775E4C929D8462D0056EC83 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775E4C729D8462D0056EC83 /* Strings.swift */; };
+		E775E4CB29DA505B0056EC83 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E775E4CA29DA505A0056EC83 /* README.md */; };
 		E7B5E50929D19AAB00D64F21 /* MockTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5E50729D19AAB00D64F21 /* MockTaskManager.swift */; };
 		E7B5E50A29D19AAB00D64F21 /* SectionForTaskManagerAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B5E50829D19AAB00D64F21 /* SectionForTaskManagerAdapterTests.swift */; };
 		F551A17C29B9CF9500C006AF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F551A17B29B9CF9500C006AF /* LoginRouter.swift */; };
@@ -89,13 +89,13 @@
 		20E8F42629CD973000AA2B73 /* LoginWorkerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWorkerSpy.swift; sourceTree = "<group>"; };
 		20E8F42729CD973000AA2B73 /* LoginViewControllerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpy.swift; sourceTree = "<group>"; };
 		E71D90EA29BDB85F003419D4 /* TodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7316DB329C74102007E7F06 /* TaskRepositoryStubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskRepositoryStubTests.swift; path = TodoListTests/TaskRepositoryStubTests.swift; sourceTree = SOURCE_ROOT; };
 		E7316DB829C846A0007E7F06 /* LoginWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorkerTests.swift; sourceTree = "<group>"; };
 		E775E4A429D82CFF0056EC83 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E775E4A929D831E10056EC83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E775E4B029D832740056EC83 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E775E4C629D8462D0056EC83 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		E775E4C729D8462D0056EC83 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		E775E4CA29DA505A0056EC83 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E7B5E50729D19AAB00D64F21 /* MockTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTaskManager.swift; sourceTree = "<group>"; };
 		E7B5E50829D19AAB00D64F21 /* SectionForTaskManagerAdapterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionForTaskManagerAdapterTests.swift; sourceTree = "<group>"; };
 		F551A17B29B9CF9500C006AF /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
@@ -201,6 +201,7 @@
 				20E8F41F29CD971800AA2B73 /* LoginInteractorTests.swift */,
 				20E8F42029CD971800AA2B73 /* LoginPresenterTests.swift */,
 				20E8F41E29CD971800AA2B73 /* LoginViewControllerTests.swift */,
+				E7316DB829C846A0007E7F06 /* LoginWorkerTests.swift */,
 			);
 			path = LoginScene;
 			sourceTree = "<group>";
@@ -221,10 +222,8 @@
 			children = (
 				2029756F29CDD7E100CF4730 /* TodoListScene */,
 				20E8F41C29CD962F00AA2B73 /* LoginScene */,
-				E7316DB329C74102007E7F06 /* TaskRepositoryStubTests.swift */,
 				E7B5E50729D19AAB00D64F21 /* MockTaskManager.swift */,
 				E7B5E50829D19AAB00D64F21 /* SectionForTaskManagerAdapterTests.swift */,
-				E7316DB829C846A0007E7F06 /* LoginWorkerTests.swift */,
 			);
 			path = TodoListTests;
 			sourceTree = "<group>";
@@ -297,6 +296,7 @@
 		F5DAE3B129A3D29C0054AC5C = {
 			isa = PBXGroup;
 			children = (
+				E775E4CA29DA505A0056EC83 /* README.md */,
 				20ABDBB929C0C0FC0015104D /* Packages */,
 				F5DAE3BC29A3D29C0054AC5C /* TodoList */,
 				E71D90EB29BDB85F003419D4 /* TodoListTests */,
@@ -429,6 +429,7 @@
 			files = (
 				F5DAE3C729A3D29D0054AC5C /* Assets.xcassets in Resources */,
 				E775E4A829D831E10056EC83 /* Localizable.strings in Resources */,
+				E775E4CB29DA505B0056EC83 /* README.md in Resources */,
 				2013A1B829D6CC5900CADDD4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,7 +488,6 @@
 				2029757E29CEB86100CF4730 /* TodoListPresenterTests.swift in Sources */,
 				20E8F42229CD971800AA2B73 /* LoginInteractorTests.swift in Sources */,
 				20E8F42129CD971800AA2B73 /* LoginViewControllerTests.swift in Sources */,
-				E7316DB429C74102007E7F06 /* TaskRepositoryStubTests.swift in Sources */,
 				20E8F42B29CD973000AA2B73 /* LoginViewControllerSpy.swift in Sources */,
 				20E8F42829CD973000AA2B73 /* LoginInteractorSpy.swift in Sources */,
 				E7316DB929C846A0007E7F06 /* LoginWorkerTests.swift in Sources */,
