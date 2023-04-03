@@ -22,7 +22,7 @@ final class TodoListViewController: UITableViewController {
 
 		setupUI()
 
-		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+		self.tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: TaskTableViewCell.reuseIdentifier)
 		tableView.dataSource = self
 		tableView.accessibilityIdentifier = AccessibilityId.tableView.rawValue
 		interactor?.fetchData()
@@ -45,29 +45,15 @@ final class TodoListViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let tasks = viewModel.tasksBySections[indexPath.section].tasks
 		let taskData = tasks[indexPath.row]
-		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-		var contentConfiguration = cell.defaultContentConfiguration()
 
-		switch taskData {
-		case .importantTask(let task):
-			let redText = [NSAttributedString.Key.foregroundColor: Theme.red]
-			let taskText = NSMutableAttributedString(string: "\(task.priority) ", attributes: redText )
-			taskText.append(NSAttributedString(string: task.name))
+		// swiftlint:disable force_cast
+		let cell = tableView.dequeueReusableCell(
+			withIdentifier: TaskTableViewCell.reuseIdentifier,
+			for: indexPath
+		) as! TaskTableViewCell
+		// swiftlint:enable force_cast
 
-			contentConfiguration.attributedText = taskText
-			contentConfiguration.secondaryText = task.deadLine
-			contentConfiguration.secondaryTextProperties.color = task.isOverdue ? Theme.red : Theme.black
-			cell.accessoryType = task.isDone ? .checkmark : .none
-		case .regularTask(let task):
-			contentConfiguration.text = task.name
-			cell.accessoryType = task.isDone ? .checkmark : .none
-		}
-
-		cell.tintColor = Theme.red
-		cell.backgroundColor = Theme.backgroundColor
-		contentConfiguration.secondaryTextProperties.font = UIFont.systemFont(ofSize: 16)
-		contentConfiguration.textProperties.font = UIFont.boldSystemFont(ofSize: 19)
-		cell.contentConfiguration = contentConfiguration
+		cell.configure(task: taskData)
 
 		cell.accessibilityIdentifier = "\(AccessibilityId.tableViewCell.rawValue)[\(indexPath.section):\(indexPath.row)]"
 		return cell
@@ -103,6 +89,7 @@ struct ViewControllerProvider: PreviewProvider {
 		}
 	}
 }
+#endif
 
 // MARK: - AccessibilityId
 extension TodoListViewController {

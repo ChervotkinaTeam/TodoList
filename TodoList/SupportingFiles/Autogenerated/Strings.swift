@@ -10,22 +10,25 @@ internal enum L10n {
     /// Login
     internal static let toLogin = L10n.tr("Localizable", "Authorization.toLogin")
   }
+
   internal enum Task {
+
     internal enum Priority {
       /// High
-      internal static let high = L10n.tr("Localizable", "Task.Priority.high", fallback: "High")
+      internal static let high = L10n.tr("Localizable", "Task.Priority.high")
       /// Low
-      internal static let low = L10n.tr("Localizable", "Task.Priority.low", fallback: "Low")
+      internal static let low = L10n.tr("Localizable", "Task.Priority.low")
       /// Medium
-      internal static let medium = L10n.tr("Localizable", "Task.Priority.medium", fallback: "Medium")
+      internal static let medium = L10n.tr("Localizable", "Task.Priority.medium")
     }
+
     internal enum State {
       /// All
-      internal static let all = L10n.tr("Localizable", "Task.State.all", fallback: "All")
+      internal static let all = L10n.tr("Localizable", "Task.State.all")
       /// Completed
-      internal static let completed = L10n.tr("Localizable", "Task.State.completed", fallback: "Completed")
+      internal static let completed = L10n.tr("Localizable", "Task.State.completed")
       /// Uncompleted
-      internal static let uncompleted = L10n.tr("Localizable", "Task.State.uncompleted", fallback: "Uncompleted")
+      internal static let uncompleted = L10n.tr("Localizable", "Task.State.uncompleted")
     }
   }
 }
