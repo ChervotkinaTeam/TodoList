@@ -9,7 +9,7 @@ import UIKit
 import PinLayout
 
 class TaskTableViewCell: UITableViewCell {
-	static let reuseIdentifier = "TaskCell"
+	static let reuseIdentifier = String(describing: TaskTableViewCell.self)
 
 	lazy var labelTitle: UILabel = makeLabelTitle()
 	lazy var labelDate: UILabel = makeLabelDate()
@@ -102,7 +102,8 @@ private extension TaskTableViewCell {
 
 		label.numberOfLines = 0
 		label.textColor = Theme.black
-		label.font = UIFont.boldSystemFont(ofSize: 19)
+		label.font = UIFont.preferredFont(forTextStyle: .body)
+		label.adjustsFontForContentSizeCategory = true
 
 		return label
 	}
@@ -112,7 +113,8 @@ private extension TaskTableViewCell {
 
 		label.numberOfLines = 0
 		label.textColor = Theme.black
-		label.font = UIFont.systemFont(ofSize: 16)
+		label.font = UIFont.preferredFont(forTextStyle: .caption1)
+		label.adjustsFontForContentSizeCategory = true
 
 		return label
 	}
