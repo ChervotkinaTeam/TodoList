@@ -145,6 +145,7 @@ struct LoginViewControllerProvider: PreviewProvider {
 		}
 	}
 }
+#endif
 
 // MARK: - AccessibilityId
 extension LoginViewController {
