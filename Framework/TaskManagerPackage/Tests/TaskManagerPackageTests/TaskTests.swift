@@ -36,11 +36,7 @@ final class TaskTests: XCTestCase {
 			"Ошибка при изменении статуса задачи на \"завершенная\""
 		)
 	}
-}
 
-// MARK: - Private
-
-private extension TaskTests {
 	private func makeSUT() -> Task {
 		Task(title: "Valid title")
 	}
