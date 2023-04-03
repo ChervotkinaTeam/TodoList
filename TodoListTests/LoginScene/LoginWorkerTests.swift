@@ -16,7 +16,7 @@ final class LoginWorkerTests: XCTestCase {
 		let sut = makeSUT()
 
 		// act
-		let result = sut.login(login: "1", password: "1")
+		let result = sut.login(login: "Admin", password: "pa$$32!")
 
 		// assert
 		XCTAssertTrue(
