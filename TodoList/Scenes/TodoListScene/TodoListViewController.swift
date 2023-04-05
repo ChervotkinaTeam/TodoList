@@ -6,7 +6,9 @@
 //
 
 import UIKit
+#if DEBUG
 import SwiftUI
+#endif
 
 protocol ITodoListViewController: AnyObject {
 	func render(viewData: TodoListModel.ViewModel)
@@ -24,7 +26,7 @@ final class TodoListViewController: UITableViewController {
 
 		self.tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: TaskTableViewCell.reuseIdentifier)
 		tableView.dataSource = self
-		tableView.accessibilityIdentifier = AccessibilityId.tableView.rawValue
+		tableView.accessibilityIdentifier = AccessibilityIdentifier.TodoListViewController.tableView.rawValue
 		interactor?.fetchData()
 	}
 
@@ -55,7 +57,8 @@ final class TodoListViewController: UITableViewController {
 
 		cell.configure(task: taskData)
 
-		cell.accessibilityIdentifier = "\(AccessibilityId.tableViewCell.rawValue)[\(indexPath.section):\(indexPath.row)]"
+		cell.accessibilityIdentifier =
+		"\(AccessibilityIdentifier.TodoListViewController.tableViewCell.rawValue)[\(indexPath.section):\(indexPath.row)]"
 		return cell
 	}
 
@@ -90,11 +93,3 @@ struct ViewControllerProvider: PreviewProvider {
 	}
 }
 #endif
-
-// MARK: - AccessibilityId
-extension TodoListViewController {
-	enum AccessibilityId: String {
-		case tableView
-		case tableViewCell
-	}
-}

@@ -6,8 +6,10 @@
 //
 
 import UIKit
-import SwiftUI
 import PinLayout
+#if DEBUG
+import SwiftUI
+#endif
 
 protocol ILoginViewController: AnyObject {
 	func render(viewModel: LoginModels.ViewModel)
@@ -104,7 +106,7 @@ private extension LoginViewController {
 			.margin(Sizes.Padding.double)
 	}
 
-	func makeButtonLogin(accessibilityId: AccessibilityId) -> UIButton {
+	func makeButtonLogin(accessibilityId: AccessibilityIdentifier.LoginViewController) -> UIButton {
 		let button = UIButton()
 
 		button.configuration = .filled()
@@ -118,7 +120,7 @@ private extension LoginViewController {
 		return button
 	}
 
-	func makeTextField(accessibilityId: AccessibilityId) -> UITextField {
+	func makeTextField(accessibilityId: AccessibilityIdentifier.LoginViewController) -> UITextField {
 		let textField = UITextField()
 
 		textField.backgroundColor = Theme.backgroundColor
@@ -146,12 +148,3 @@ struct LoginViewControllerProvider: PreviewProvider {
 	}
 }
 #endif
-
-// MARK: - AccessibilityId
-extension LoginViewController {
-	enum AccessibilityId: String {
-		case buttonLogin
-		case textFieldLogin
-		case textFieldPass
-	}
-}
