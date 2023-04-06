@@ -36,7 +36,7 @@ final class TodoListUITests: XCTestCase {
 
 		XCTAssert(
 			app.tables[AccessibilityIdentifier.TodoListViewController.tableView.rawValue].exists,
-			"После ввода корректного логина и пароля не произошел переход на следующий экран"
+			"Ошибка, после ввода корректного логина и пароля не произошел переход на следующий экран"
 		)
 	}
 
@@ -53,7 +53,7 @@ final class TodoListUITests: XCTestCase {
 
 		XCTAssertFalse(
 			app.tables[AccessibilityIdentifier.TodoListViewController.tableView.rawValue].exists,
-			"После ввода некорректного логина и пароля произошел переход на другой экран"
+			"Ошибка, после ввода некорректного логина и пароля произошел переход на другой экран"
 		)
 	}
 }
