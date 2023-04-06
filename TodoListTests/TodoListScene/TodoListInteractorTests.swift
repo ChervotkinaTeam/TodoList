@@ -32,6 +32,7 @@ final class TodoListInteractorTests: XCTestCase {
 	}
 }
 
+// MARK: - Private 
 private extension TodoListInteractorTests {
 	func makeSut() -> TodoListInteractor {
 		TodoListInteractor(sectionManager: sectionManager, presenter: presenter)
