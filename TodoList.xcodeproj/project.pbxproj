@@ -23,6 +23,7 @@
 		203FCE6129DD3C6700202AE6 /* LoginScreenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E5F2329DD36C000621923 /* LoginScreenObject.swift */; };
 		203FCE6429DD3C9D00202AE6 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203FCE6329DD3C9D00202AE6 /* Predicate.swift */; };
 		203FCE6529DD3CC400202AE6 /* AccessibilityIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201E5F2029DD317800621923 /* AccessibilityIdentifier.swift */; };
+		203FCE6A29DF145A00202AE6 /* LoginSceneUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203FCE6929DF145A00202AE6 /* LoginSceneUITest.swift */; };
 		205B6BCE29D6D849005E682F /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B6BCD29D6D849005E682F /* Sizes.swift */; };
 		20ABDBBF29C0C1DE0015104D /* TaskManagerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 20ABDBBE29C0C1DE0015104D /* TaskManagerPackage */; };
 		20DAEF0E29D8793E00CBC512 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DAEF0D29D8793E00CBC512 /* Colours.swift */; };
@@ -94,6 +95,7 @@
 		2029757D29CEB86100CF4730 /* TodoListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenterTests.swift; sourceTree = "<group>"; };
 		2036F06B29C70F3200180C5B /* SectionForTaskManagerAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionForTaskManagerAdapter.swift; sourceTree = "<group>"; };
 		203FCE6329DD3C9D00202AE6 /* Predicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
+		203FCE6929DF145A00202AE6 /* LoginSceneUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneUITest.swift; sourceTree = "<group>"; };
 		205B6BCD29D6D849005E682F /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		20ABDBBC29C0C1CB0015104D /* TaskManagerPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TaskManagerPackage; path = Framework/TaskManagerPackage; sourceTree = "<group>"; };
 		20DAEF0D29D8793E00CBC512 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				201E5F2329DD36C000621923 /* LoginScreenObject.swift */,
+				203FCE6929DF145A00202AE6 /* LoginSceneUITest.swift */,
 			);
 			path = LoginScene;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				203FCE6529DD3CC400202AE6 /* AccessibilityIdentifier.swift in Sources */,
 				203FCE6029DD3C5500202AE6 /* BaseScreenObject.swift in Sources */,
 				203FCE6429DD3C9D00202AE6 /* Predicate.swift in Sources */,
+				203FCE6A29DF145A00202AE6 /* LoginSceneUITest.swift in Sources */,
 				203FCE6129DD3C6700202AE6 /* LoginScreenObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
