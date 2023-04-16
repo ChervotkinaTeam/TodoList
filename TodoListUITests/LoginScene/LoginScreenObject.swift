@@ -8,9 +8,14 @@
 import XCTest
 
 final class LoginScreenObject: BaseScreenObject {
-	lazy var textFieldLogin = app.textFields [AccessibilityIdentifier.LoginViewController.textFieldLogin.rawValue]
-	lazy var textFieldPass = app.textFields [AccessibilityIdentifier.LoginViewController.textFieldPass.rawValue]
-	lazy var buttonLogin = app.buttons [AccessibilityIdentifier.LoginViewController.buttonLogin.rawValue]
+
+	// MARK: - Private properties
+	
+	private lazy var textFieldLogin = app.textFields [AccessibilityIdentifier.LoginViewController.textFieldLogin.rawValue]
+	private lazy var textFieldPass = app.textFields [AccessibilityIdentifier.LoginViewController.textFieldPass.rawValue]
+	private lazy var buttonLogin = app.buttons [AccessibilityIdentifier.LoginViewController.buttonLogin.rawValue]
+
+	// MARK: - ScreenObject Methods
 
 	@discardableResult
 	func isLoginScreen() -> Self {
