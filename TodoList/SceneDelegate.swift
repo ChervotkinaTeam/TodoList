@@ -18,13 +18,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		guard let scene = (scene as? UIWindowScene) else { return }
 		let window = UIWindow(windowScene: scene)
 
-		window.rootViewController = assembly()
+		// window.rootViewController = assemblyLoginViewController()
+		window.rootViewController = assemblyTodoListViewController()
 		window.makeKeyAndVisible()
 
 		self.window = window
 	}
 
-	func assembly() -> UIViewController {
+	func assemblyLoginViewController() -> UIViewController {
 		let loginViewController = LoginAssembler().assembly()
 		let todoListViewController = TodoListAssembler().assembly()
 
@@ -38,5 +39,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		}
 
 		return loginViewController
+	}
+
+	func assemblyTodoListViewController() -> UIViewController {
+		return TodoListAssembler().assembly()
 	}
 }

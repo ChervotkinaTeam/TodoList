@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class TodoListScreenObjec: BaseScreenObject {
+final class TodoListScreenObject: BaseScreenObject {
 
 	// MARK: - Private properties
 
