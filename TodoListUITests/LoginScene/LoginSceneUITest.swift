@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class TodoListUITests: XCTestCase {
+final class LoginSceneUITest: XCTestCase {
 
 	// swiftlint:disable implicitly_unwrapped_optional
 	private var app: XCUIApplication!
