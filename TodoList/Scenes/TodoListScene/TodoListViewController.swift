@@ -48,12 +48,10 @@ final class TodoListViewController: UITableViewController {
 		let tasks = viewModel.tasksBySections[indexPath.section].tasks
 		let taskData = tasks[indexPath.row]
 
-		// swiftlint:disable force_cast
-		let cell = tableView.dequeueReusableCell(
+		guard let cell = tableView.dequeueReusableCell(
 			withIdentifier: TaskTableViewCell.reuseIdentifier,
 			for: indexPath
-		) as! TaskTableViewCell
-		// swiftlint:enable force_cast
+		) as? TaskTableViewCell else { return UITableViewCell() }
 
 		cell.configure(task: taskData)
 
