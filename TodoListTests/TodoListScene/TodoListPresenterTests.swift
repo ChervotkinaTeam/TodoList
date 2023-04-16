@@ -22,6 +22,7 @@ final class TodoListPresenterTests: XCTestCase {
 	}
 }
 
+// MARK: - Private 
 private extension TodoListPresenterTests {
 	func makeSut() -> TodoListPresenter {
 		TodoListPresenter(viewController: viewController)

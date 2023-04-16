@@ -20,6 +20,20 @@
                ReferencedContainer = "container:TodoList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "201E5F2A29DD3B2700621923"
+               BuildableName = "TodoListUITests.xctest"
+               BlueprintName = "TodoListUITests"
+               ReferencedContainer = "container:TodoList.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -35,6 +49,17 @@
                BlueprintIdentifier = "E71D90E929BDB85F003419D4"
                BuildableName = "TodoListTests.xctest"
                BlueprintName = "TodoListTests"
+               ReferencedContainer = "container:TodoList.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "201E5F2A29DD3B2700621923"
+               BuildableName = "TodoListUITests.xctest"
+               BlueprintName = "TodoListUITests"
                ReferencedContainer = "container:TodoList.xcodeproj">
             </BuildableReference>
          </TestableReference>
