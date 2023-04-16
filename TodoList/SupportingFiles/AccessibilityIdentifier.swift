@@ -13,6 +13,7 @@ enum AccessibilityIdentifier {
 	enum TodoListViewController: String {
 		case tableView
 		case tableViewCell
+		case todoListViewController
 	}
 
 	// MARK: - LoginViewController

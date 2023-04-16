@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2009568E29EBA14C00C7A354 /* TodoListScreenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009568C29EBA14C00C7A354 /* TodoListScreenObject.swift */; };
 		2013A1B829D6CC5900CADDD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2013A1B629D6CC5900CADDD4 /* LaunchScreen.storyboard */; };
 		2019821C29D09473001D31F2 /* TodoListTableViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019821B29D09473001D31F2 /* TodoListTableViewSpy.swift */; };
 		2019821F29D4034A001D31F2 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 2019821E29D4034A001D31F2 /* PinLayout */; };
@@ -80,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2009568C29EBA14C00C7A354 /* TodoListScreenObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoListScreenObject.swift; sourceTree = "<group>"; };
 		2013A1B729D6CC5900CADDD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2019821B29D09473001D31F2 /* TodoListTableViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTableViewSpy.swift; sourceTree = "<group>"; };
 		2019822129D43F4F001D31F2 /* UIViewController+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Preview.swift"; sourceTree = "<group>"; };
@@ -166,6 +168,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2009568B29EBA14C00C7A354 /* TodoScene */ = {
+			isa = PBXGroup;
+			children = (
+				2009568C29EBA14C00C7A354 /* TodoListScreenObject.swift */,
+			);
+			path = TodoScene;
+			sourceTree = "<group>";
+		};
 		2019822029D43F11001D31F2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +191,7 @@
 			children = (
 				203FCE6629DE830900202AE6 /* Common */,
 				203FCE6229DD3C7200202AE6 /* LoginScene */,
+				2009568B29EBA14C00C7A354 /* TodoScene */,
 			);
 			path = TodoListUITests;
 			sourceTree = "<group>";
@@ -585,6 +596,7 @@
 				203FCE6029DD3C5500202AE6 /* BaseScreenObject.swift in Sources */,
 				203FCE6429DD3C9D00202AE6 /* Predicate.swift in Sources */,
 				203FCE6A29DF145A00202AE6 /* LoginSceneUITest.swift in Sources */,
+				2009568E29EBA14C00C7A354 /* TodoListScreenObject.swift in Sources */,
 				203FCE6129DD3C6700202AE6 /* LoginScreenObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

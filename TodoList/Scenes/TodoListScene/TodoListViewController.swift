@@ -26,6 +26,7 @@ final class TodoListViewController: UITableViewController {
 
 		self.tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: TaskTableViewCell.reuseIdentifier)
 		tableView.dataSource = self
+		self.view.accessibilityIdentifier = AccessibilityIdentifier.TodoListViewController.todoListViewController.rawValue
 		tableView.accessibilityIdentifier = AccessibilityIdentifier.TodoListViewController.tableView.rawValue
 		interactor?.fetchData()
 	}
