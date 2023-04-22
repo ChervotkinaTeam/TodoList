@@ -38,6 +38,8 @@
 		20E8F42929CD973000AA2B73 /* LoginPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42529CD973000AA2B73 /* LoginPresenterSpy.swift */; };
 		20E8F42A29CD973000AA2B73 /* LoginWorkerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42629CD973000AA2B73 /* LoginWorkerSpy.swift */; };
 		20E8F42B29CD973000AA2B73 /* LoginViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8F42729CD973000AA2B73 /* LoginViewControllerSpy.swift */; };
+		20F8379C29F42A35005022B0 /* CommandLineArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F8379B29F42A35005022B0 /* CommandLineArguments.swift */; };
+		20F8379D29F42BB8005022B0 /* CommandLineArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F8379B29F42A35005022B0 /* CommandLineArguments.swift */; };
 		E7316DB929C846A0007E7F06 /* LoginWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7316DB829C846A0007E7F06 /* LoginWorkerTests.swift */; };
 		E775E4A829D831E10056EC83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E775E4AA29D831E10056EC83 /* Localizable.strings */; };
 		E775E4C829D8462D0056EC83 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E775E4C629D8462D0056EC83 /* Assets.swift */; };
@@ -112,6 +114,7 @@
 		20E8F42529CD973000AA2B73 /* LoginPresenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenterSpy.swift; sourceTree = "<group>"; };
 		20E8F42629CD973000AA2B73 /* LoginWorkerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWorkerSpy.swift; sourceTree = "<group>"; };
 		20E8F42729CD973000AA2B73 /* LoginViewControllerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpy.swift; sourceTree = "<group>"; };
+		20F8379B29F42A35005022B0 /* CommandLineArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineArguments.swift; sourceTree = "<group>"; };
 		E71D90EA29BDB85F003419D4 /* TodoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7316DB829C846A0007E7F06 /* LoginWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorkerTests.swift; sourceTree = "<group>"; };
 		E775E4A429D82CFF0056EC83 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -306,6 +309,7 @@
 				2013A1B629D6CC5900CADDD4 /* LaunchScreen.storyboard */,
 				F5DAE3CB29A3D29D0054AC5C /* Info.plist */,
 				201E5F2029DD317800621923 /* AccessibilityIdentifier.swift */,
+				20F8379B29F42A35005022B0 /* CommandLineArguments.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -595,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F8379D29F42BB8005022B0 /* CommandLineArguments.swift in Sources */,
 				203FCE6529DD3CC400202AE6 /* AccessibilityIdentifier.swift in Sources */,
 				203FCE6029DD3C5500202AE6 /* BaseScreenObject.swift in Sources */,
 				2009569129EBB90200C7A354 /* TodoScreenUITest.swift in Sources */,
@@ -643,6 +648,7 @@
 				F551A19429B9CFEB00C006AF /* TodoListModel.swift in Sources */,
 				F551A19929B9CFEB00C006AF /* LoginWorker.swift in Sources */,
 				E775E4CD29DA55A60056EC83 /* TaskTableViewCell.swift in Sources */,
+				20F8379C29F42A35005022B0 /* CommandLineArguments.swift in Sources */,
 				F551A19629B9CFEB00C006AF /* LoginModels.swift in Sources */,
 				F551A1A729B9D51C00C006AF /* LoginAssembler.swift in Sources */,
 				F5DAE3BE29A3D29C0054AC5C /* AppDelegate.swift in Sources */,

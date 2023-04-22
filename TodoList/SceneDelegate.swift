@@ -18,8 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		guard let scene = (scene as? UIWindowScene) else { return }
 		let window = UIWindow(windowScene: scene)
 
-		// window.rootViewController = assemblyLoginViewController()
-		window.rootViewController = assemblyTodoListViewController()
+#if DEBUG
+		if CommandLine.arguments.contains(CommandLineArguments.skipLoginScene.rawValue) {
+			window.rootViewController = assemblyTodoListViewController()
+		} else {
+			window.rootViewController = assemblyLoginViewController()
+		}
+#else
+		window.rootViewController = assemblyLoginViewController()
+#endif
+
 		window.makeKeyAndVisible()
 
 		self.window = window

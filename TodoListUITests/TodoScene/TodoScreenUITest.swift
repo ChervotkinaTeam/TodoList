@@ -25,16 +25,16 @@ class TodoScreenUITest: XCTestCase {
 	// MARK: - Public Methods
 	func test_setPriorityTask_mustBeSuccess() {
 
-		app.launchArguments = ["TodoListViewController"]
+		app.launchArguments = [CommandLineArguments.skipLoginScene.rawValue]
 		app.launch()
 
-//		todoScreenObject
-//			.isTodoScreen()
-//			.tapFirstCell()
-//
-//		XCTAssert(
-//			app.otherElements[AccessibilityIdentifier.TodoListViewController.todoListViewController.rawValue].exists,
-//			"Ошибка, после ввода корректного логина и пароля не произошел переход на следующий экран"
-//		)
+		todoScreenObject
+			.isTodoScreen()
+			.tapFirstCell()
+
+		XCTAssert(
+			app.otherElements[AccessibilityIdentifier.TodoListViewController.todoListViewController.rawValue].exists,
+			"Ошибка, после ввода корректного логина и пароля не произошел переход на следующий экран"
+		)
 	}
 }
