@@ -22,13 +22,13 @@ final class TodoListPresenterTests: XCTestCase {
 	}
 }
 
+// MARK: - Private 
 private extension TodoListPresenterTests {
 	func makeSut() -> TodoListPresenter {
 		TodoListPresenter(viewController: viewController)
 	}
 
 	func makeResponse() -> TodoListModel.Response {
-		let response = TodoListModel.Response(data: [TodoListModel.Response.SectionWithTasks]())
-		return response
+		return TodoListModel.Response(data: [TodoListModel.Response.SectionWithTasks]())
 	}
 }

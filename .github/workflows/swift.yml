@@ -1,0 +1,22 @@
+name: iOS starter workflow
+
+on:
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: SwiftLint
+        run: swiftlint --reporter github-actions-logging --strict
+      - name: SwiftGen
+        run: brew install swiftgen
+      - name: Build
+        run: xcodebuild build-for-testing -project "TodoList.xcodeproj" -scheme "TodoList" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest"
+      - name: Run tests
+        run: xcodebuild test-without-building -project "TodoList.xcodeproj" -scheme "TodoList" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest"

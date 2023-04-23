@@ -6,6 +6,9 @@
 //
 
 import UIKit
+#if DEBUG
+import SwiftUI
+#endif
 
 protocol ITodoListViewController: AnyObject {
 	func render(viewData: TodoListModel.ViewModel)
@@ -18,10 +21,12 @@ final class TodoListViewController: UITableViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		title = "TodoList"
 
-		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+		setupUI()
+
+		self.tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: TaskTableViewCell.reuseIdentifier)
 		tableView.dataSource = self
+		tableView.accessibilityIdentifier = AccessibilityIdentifier.TodoListViewController.tableView.rawValue
 		interactor?.fetchData()
 	}
 
@@ -42,29 +47,16 @@ final class TodoListViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let tasks = viewModel.tasksBySections[indexPath.section].tasks
 		let taskData = tasks[indexPath.row]
-		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-		var contentConfiguration = cell.defaultContentConfiguration()
 
-		switch taskData {
-		case .importantTask(let task):
-			let redText = [NSAttributedString.Key.foregroundColor: UIColor.red]
-			let taskText = NSMutableAttributedString(string: "\(task.priority) ", attributes: redText )
-			taskText.append(NSAttributedString(string: task.name))
+		guard let cell = tableView.dequeueReusableCell(
+			withIdentifier: TaskTableViewCell.reuseIdentifier,
+			for: indexPath
+		) as? TaskTableViewCell else { return UITableViewCell() }
 
-			contentConfiguration.attributedText = taskText
-			contentConfiguration.secondaryText = task.deadLine
-			contentConfiguration.secondaryTextProperties.color = task.isOverdue ? .red : .black
-			cell.accessoryType = task.isDone ? .checkmark : .none
-		case .regularTask(let task):
-			contentConfiguration.text = task.name
-			cell.accessoryType = task.isDone ? .checkmark : .none
-		}
+		cell.configure(task: taskData)
 
-		cell.tintColor = .red
-		contentConfiguration.secondaryTextProperties.font = UIFont.systemFont(ofSize: 16)
-		contentConfiguration.textProperties.font = UIFont.boldSystemFont(ofSize: 19)
-		cell.contentConfiguration = contentConfiguration
-
+		cell.accessibilityIdentifier =
+		"\(AccessibilityIdentifier.TodoListViewController.tableViewCell.rawValue)[\(indexPath.section):\(indexPath.row)]"
 		return cell
 	}
 
@@ -73,9 +65,29 @@ final class TodoListViewController: UITableViewController {
 	}
 }
 
+// MARK: - Extensions
 extension TodoListViewController: ITodoListViewController {
 	func render(viewData: TodoListModel.ViewModel) {
 		self.viewModel = viewData
 		tableView.reloadData()
 	}
 }
+
+// MARK: - Private extensions
+private extension TodoListViewController {
+
+	func setupUI() {
+		view.backgroundColor = Theme.backgroundColor
+	}
+}
+
+// MARK: - Preview
+#if DEBUG
+struct ViewControllerProvider: PreviewProvider {
+	static var previews: some View {
+		Group {
+			TodoListViewController().preview()
+		}
+	}
+}
+#endif

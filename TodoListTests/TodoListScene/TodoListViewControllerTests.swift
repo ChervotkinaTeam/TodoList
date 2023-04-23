@@ -21,8 +21,7 @@ final class TodoListViewControllerTests: XCTestCase {
 	override func setUp() {
 		super.setUp()
 
-		let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-		sut = storyboard.instantiateViewController(identifier: "TodoListViewController") as? TodoListViewController
+		sut = TodoListViewController()
 		interactor = TodoListInteractorSpy()
 		sut.interactor = interactor
 		window = UIWindow()
@@ -44,7 +43,7 @@ final class TodoListViewControllerTests: XCTestCase {
 
 		sut.viewWillAppear(true)
 
-		XCTAssertTrue(interactor.isCalledFetchedData, "не вызван interactor.fetchData()")
+		XCTAssertTrue(interactor.isCalledFetchedData, "Не вызван interactor.fetchData()")
 	}
 
 	func test_render_displayData_shouldBeSuccess() {
@@ -55,6 +54,6 @@ final class TodoListViewControllerTests: XCTestCase {
 		sut.tableView = tableView
 		sut.render(viewData: viewModel)
 
-		XCTAssertTrue(tableView.isCalledReloadData, "viewController.tableView.reloadData")
+		XCTAssertTrue(tableView.isCalledReloadData, "Не вызвано обновление содержимого таблицы")
 	}
 }

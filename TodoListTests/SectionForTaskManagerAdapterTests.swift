@@ -106,6 +106,7 @@ final class SectionForTaskManagerAdapterTests: XCTestCase {
 	}
 }
 
+// MARK: - Private 
 private extension SectionForTaskManagerAdapterTests {
 	func makeSut() -> SectionForTaskManagerAdapter {
 		return SectionForTaskManagerAdapter(taskManager: mockTaskManager)
