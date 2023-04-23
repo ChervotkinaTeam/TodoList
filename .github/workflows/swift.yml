@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: SwiftLint
-        run: brew install swiftlint
+        run: swiftlint --reporter github-actions-logging --strict
       - name: SwiftGen
         run: brew install swiftgen
       - name: Build
