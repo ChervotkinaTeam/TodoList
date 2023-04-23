@@ -1,13 +1,22 @@
-name: Swift
+name: iOS starter workflow
+
 on:
-   pull_request:
-      branches: [ "main" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
 jobs:
-   build:
-      runs-on: macos-latest
-      steps:
-      - uses: actions/checkout@v3
+  build:
+    name: Build and Test
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: SwiftLint
+        run: brew install swiftlint
+      - name: SwiftGen
+        run: brew install swiftgen
       - name: Build
-        run: swift build -v
+        run: xcodebuild build-for-testing -project "TodoList.xcodeproj" -scheme "TodoList" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest"
       - name: Run tests
-        run: swift test -v
+        run: xcodebuild test-without-building -project "TodoList.xcodeproj" -scheme "TodoList" -destination "platform=iOS Simulator,name=iPhone 13,OS=latest"
